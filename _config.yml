@@ -1,9 +1,9 @@
-title: Your Name
-email: your@email.com
+title: Cheyanne Shariat
+email: cshariat@caltech.edu
 description: >-
-  A personal academic site.
+ Hello! Welcome to my academic website.
 baseurl: "" # leave this empty for GitHub Pages
-url: "https://yourusername.github.io"
+url: "https://cheyanneshariat.github.io"
 
 theme: minima
 minima:
