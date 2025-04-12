@@ -5,13 +5,18 @@ description: >-
 baseurl: "" # leave this empty for GitHub Pages
 url: "https://cheyanneshariat.github.io"
 
-theme: minima
-minima:
-  skin: custom-dark
+theme: null
 sass:
   style: compressed
 
-markdown: kramdown
+# Tell Jekyll where to find your CSS
+include:
+  - assets
+
+# Custom Minima setup
+minima:
+  skin: custom-dark
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
