@@ -1,0 +1,15 @@
+title: Your Name
+email: your@email.com
+description: >-
+  A personal academic site.
+baseurl: "" # leave this empty for GitHub Pages
+url: "https://yourusername.github.io"
+
+theme: minima
+minima:
+  skin: dark
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
