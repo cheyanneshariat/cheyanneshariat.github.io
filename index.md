@@ -3,24 +3,32 @@ layout: home
 title: "Cheyanne Shariat"
 ---
 
-Welcome to my academic site.
+<img src="/assets/profile.jpg" style="width: 150px; border-radius: 50%;" alt="Profile picture" />
 
-### About Me
+# About Me
 
-I'm a graduate student at Caltech studying XX. My work focuses on YY.
+I’m a graduate student studying the evolution of triple and binary star systems from a joint theoretical and observational framework. My interests include X, Y, and Z.
 
-### Research
+# Research
 
-- **Title of paper** – Conference, Year.  
-  Description or link.
+### Selected Publications
 
-- **Another one** – Journal, Year.
+- **Paper Title** — Conference, Year  
+  Short description or [PDF link](#)
 
-### CV
+- **Another One** — Journal, Year
 
-You can download my [CV here](assets/cv.pdf).
+# Teaching
 
-### Contact
+- **Course Name** (Term)  
+  Brief description
 
-- Email: cshariat@caltech.edu
-- GitHub: [github.com/cheyanneshariat](https://github.com/cheyanneshariat)
+# CV
+
+📄 [Download my CV](assets/cv.pdf)
+
+# Contact
+
+📧 cshariat@caltech.edu  
+🔗 [GitHub](https://github.com/cheyanneshariat)  
+🔗 [Google Scholar](#)  
