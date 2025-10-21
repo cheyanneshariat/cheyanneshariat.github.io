@@ -27,7 +27,7 @@ author:
   name             : "Cheyanne Shariat"
   pronouns         : # example: "she/her"  
   bio              : "Astrophysics PhD Student"
-  location         : ""
+  # location         : ""
   employer         : "Caltech"
   uri              : # URL
   email            : "cshariat@caltech.edu" 
