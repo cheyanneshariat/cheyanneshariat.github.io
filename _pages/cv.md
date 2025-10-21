@@ -14,3 +14,5 @@ Education
 * Ph.D in Astrophysics, Caltech, 2024-2029 (expected)
 * B.S. in Physics, UCLA, 2021-2024
 
+[Download my CV (PDF)]({{ base_path }}/files/Shariat_Cheyanne_CV.pdf)
+
