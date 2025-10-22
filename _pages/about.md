@@ -14,6 +14,6 @@ I work at the intersection of theory and observation, combining data from ground
 
 My broader goal is to let theory and observation inform each other—using models to interpret data, and data to refine models such that at the end of the day, we learn something new!
 
-.
+
 I am always happy to chat—feel free to reach out at cshariat@caltech.edu
-.
+
