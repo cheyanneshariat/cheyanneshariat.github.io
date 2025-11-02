@@ -1,18 +1,20 @@
 ---
 layout: archive
-title: "CV"
-permalink: /cv/
+title: "Media"
+permalink: /media/
 author_profile: true
-redirect_from:
-  - /resume
 ---
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Astrophysics, Caltech, 2024-2029 (expected)
-* B.S. in Physics, UCLA, 2021-2024
+## A Triple Love Story
 
-[Download my CV (PDF)]({{ base_path }}/files/Shariat_Cheyanne_CV.pdf)
+["Third Wheel" Star Brings Companions Closer Together](https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together)
 
+## Department of Energy + Computation
+
+[Caltech Graduate Student and Alumna Win DOE Fellowship for Computational Science](https://www.gps.caltech.edu/news-and-events/news/caltech-graduate-student-and-alumna-win-doe-fellowship-for-computational-science)
+
+## Nobel Laureate's in Germany (and me)
+
+[3 UCLA physicists named to week-long Nobel laureate summit](https://www.college.ucla.edu/physical-sciences-ucla-physicists-named-to-week-long-nobel-laureate-summit-2024)
