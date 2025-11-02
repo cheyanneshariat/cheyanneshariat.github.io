@@ -98,7 +98,7 @@
     border-radius: 50%; // default 50%
 
     @include breakpoint($large) {
-      padding: 5px; //default 5
+      padding: 2px; //default 5
       border: 1px solid var(--global-border-color);
     }
   }
