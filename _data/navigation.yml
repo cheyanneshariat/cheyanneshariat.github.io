@@ -26,12 +26,13 @@ main:
         
   # - title: "Blog Posts"
   #   url: /year-archive/
-  - title: "Media"
-    url: /media/
 
   - title: "CV"
     url: /cv/
-    
+
+  - title: "Media"
+    url: /media/
+
   # - title: "CV"
   #   url: /cv-json/
     
