@@ -12,7 +12,7 @@ My research focuses on the **formation and evolution of multiple-star systems**,
 
 My work lies at the intersection of theory and observation. On the theoretical side, I model the dynamical evolution of binary and triple star systems using detailed simulations and population synthesis frameworks. I am equally interested in confronting these models with data: testing predictions against observations and letting them inform one another. Observationally, I use data from ground- and space-based facilities - including Gaia, JWST, HST, Palomar, and Keck - and especially enjoy exploring publicly available large-scale surveys.
 
-I remain broadly interested in various questions in astrophysics, including studying stellar populations in [other galaxies](https://ui.adsabs.harvard.edu/abs/2025arXiv250904555S/abstract), measuring the [ages of stars](https://ui.adsabs.harvard.edu/abs/2025arXiv251008675S/abstract), (occasionally) [exoplanets](https://ui.adsabs.harvard.edu/abs/2024ApJ...964L..13S/abstract).
+I remain broadly interested in various questions in astrophysics, including studying stellar populations in [other galaxies](https://ui.adsabs.harvard.edu/abs/2025arXiv250904555S/abstract), measuring the [ages of stars](https://ui.adsabs.harvard.edu/abs/2025arXiv251008675S/abstract), and (occasionally) [exoplanets](https://ui.adsabs.harvard.edu/abs/2024ApJ...964L..13S/abstract).
 
 I am always happy to chat: feel free to reach out at [cshariat@caltech.edu](cshariat@caltech.edu).
 
