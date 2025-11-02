@@ -8,12 +8,11 @@ redirect_from:
 ---
 
 I am a second-year Ph.D. student in Astrophysics at the California Institute of Technology, advised by [Kareem El-Badry](https://kareemelbadry.github.io/) and often working closely with [Smadar Naoz](https://snaoz.astro.ucla.edu/) (UCLA).
-My research focuses on the formation and evolution of multiple-star systems, particularly triples and binaries. Triple star systems are [common](https://ui.adsabs.harvard.edu/abs/2025PASP..137i4201S/abstract), and I'm interested in exploring how their complex dynamics shape the evolution of stellar populations and lead to various exotic stellar phenomena.
+My research focuses on the **formation and evolution of multiple-star systems**, particularly binaries and triples. Triple star systems are [common](https://ui.adsabs.harvard.edu/abs/2025PASP..137i4201S/abstract) and dynamically rich, offering a natural laboratory for studying stellar interactions, population evolution, and the origins of exotic stellar phenomena. Specific applications have been to white dwarfs, accreting binaries/compact objects, stellar mergers, 
 
-I work at the intersection of theory and observation, combining data from ground- and space-based telescopes with detailed three-body simulations and population synthesis models. My projects span a wide range of astrophysical contexts, from stellar multiplicity and compact object formation to studying dwarf extragalactic populations and (sometimes) the formation of exoplanet systems. I'm also constantly exploring large-scale surveys.
+My work lies at the intersection of theory and observation. On the theoretical side, I model the dynamical evolution of binary and triple star systems using detailed simulations and population synthesis frameworks. I am equally interested in confronting these models with data: testing predictions against observations and letting them inform one another. Observationally, I use data from ground- and space-based facilities - including Gaia, JWST, HST, Palomar, and Keck - and especially enjoy exploring publicly available large-scale surveys.
 
-My broader goal is to let theory and observation inform each other—using models to interpret data, and data to refine models such that at the end of the day, we learn something new!
+I remain broadly interested in various questions in astrophysics, including studying stellar populations in [other galaxies](https://ui.adsabs.harvard.edu/abs/2025arXiv250904555S/abstract), measuring the [ages of stars](https://ui.adsabs.harvard.edu/abs/2025arXiv251008675S/abstract), (occasionally) [exoplanets](https://ui.adsabs.harvard.edu/abs/2024ApJ...964L..13S/abstract).
 
-
-I am always happy to chat—feel free to reach out at cshariat@caltech.edu
+I am always happy to chat: feel free to reach out at [cshariat@caltech.edu](cshariat@caltech.edu).
 
