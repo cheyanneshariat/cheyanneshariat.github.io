@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[Download my CV (PDF)]({{ base_path }}/files/Shariat_Cheyanne_CV.pdf)
+[full CV (PDF)]({{ base_path }}/files/Shariat_Cheyanne_CV.pdf)
 
 ## Education
 
