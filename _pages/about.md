@@ -14,4 +14,6 @@ My work lies at the intersection of theory and observation. On the theoretical s
 
 I remain broadly interested in various questions in astrophysics, including studying stellar populations in [other galaxies](https://ui.adsabs.harvard.edu/abs/2025arXiv250904555S/abstract), measuring the [ages of stars](https://ui.adsabs.harvard.edu/abs/2025arXiv251008675S/abstract), and (occasionally) [exoplanets](https://ui.adsabs.harvard.edu/abs/2024ApJ...964L..13S/abstract).
 
+Beyond research, I enjoy playing basketball, tennis, skateboarding, and generally just being outside as much as possible.
+
 I am always happy to chat: feel free to reach out at **cshariat@caltech.edu**.
