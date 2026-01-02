@@ -394,7 +394,7 @@
   .nav__title {
     color: #fff;
     font-size: $type-size-6;
-    background: var(--global-base-color);
+    background: #d6b994; // default var(--global-base-color);
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
