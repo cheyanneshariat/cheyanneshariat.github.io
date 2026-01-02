@@ -123,13 +123,13 @@
   margin: 0;
 
   @include breakpoint($large) {
-    margin-top: 13px; // default 10px;
-    margin-bottom: 13px; // default 10px;
+    margin-top: 19px; // default 10px;
+    margin-bottom: 10px; // default 10px;
   }
 }
 .sidebar .author__name {
   font-family: $sans-serif;
-  font-size: $type-size-2; // default $type-size-5;
+  font-size: 20px ; //$type-size-5; // default $type-size-5;
 }
 
 .sidebar .author__desktop {
