@@ -94,8 +94,8 @@
   }
 
   img {
-    max-width: 200px;  // default 175
-    border-radius: 0%; // default 50%
+    max-width: 220px;  // default 175
+    border-radius: 10%; // default 50%
 
     @include breakpoint($large) {
       padding: 2px; //default 5
@@ -129,7 +129,7 @@
 }
 .sidebar .author__name {
   font-family: $sans-serif;
-  font-size: $type-size-8; // default $type-size-5;
+  font-size: $type-size-10; // default $type-size-5;
 }
 
 .sidebar .author__desktop {
