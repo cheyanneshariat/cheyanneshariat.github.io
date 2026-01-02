@@ -92,8 +92,8 @@
       }
 
       &.current {
-        color: #fff;
-        background: var(--global-base-color);
+        color: #d6b994; // default #fff
+        background: #d6b994; // default var(--global-base-color);
       }
 
       &.disabled {
