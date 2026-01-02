@@ -175,7 +175,7 @@
 .greedy-nav {
   position: relative;
   min-width: 250px;
-  background: #d6b994; // default var(--global-bg-color);
+  background: #d6b994; // default: var(--global-bg-color);
 
   a {
     display: block;
@@ -185,7 +185,7 @@
     text-decoration: none;
 
     &:hover {
-      color: var(--global-masthead-link-color-hover);
+      color: #4662eb; // default: var(--global-masthead-link-color-hover);
     }
   }
 
