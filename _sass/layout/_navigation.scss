@@ -84,7 +84,7 @@
       text-align: center;
       text-decoration: none;
       color: var(--global-text-color-light);
-      border: 1px solid var(--global-border-color);
+      border: 3px solid var(--global-border-color);
       border-radius: 0;
 
       &:hover {
@@ -92,7 +92,7 @@
       }
 
       &.current {
-        color: #d6b994; // default #fff
+        color: #fff; // default #fff
         background: #d6b994; // default var(--global-base-color);
       }
 
