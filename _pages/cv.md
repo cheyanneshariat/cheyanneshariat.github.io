@@ -13,7 +13,7 @@ redirect_from:
 
 ## Education
 
-* Ph.D in Astrophysics, Caltech, 2024-2029 (expected)
+* Ph.D in Astrophysics, Caltech, 2024-
 * B.S. in Physics, UCLA, 2021-2024
 
 ## Research Positions
