@@ -181,11 +181,12 @@
     display: block;
     margin: 0 1rem;
     padding: 0.5rem 0;
-    color: var(--global-masthead-link-color);
+    font-size: 1.1rem;  // default 1rem
+    color: #3a2f1e; // default: var(--global-masthead-link-color);
     text-decoration: none;
 
     &:hover {
-      color: #4662eb; // default: var(--global-masthead-link-color-hover);
+      color: #000; // default: var(--global-masthead-link-color-hover);
     }
   }
 
@@ -196,7 +197,7 @@
     padding: 0 0.5rem;
     border: 0;
     outline: none;
-    background-color: var(--global-base-color);
+    background-color: #d6b994; // default: var(--global-base-color);
     color: #fff;
     cursor: pointer;
     z-index: 100;
