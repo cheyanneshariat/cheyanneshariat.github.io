@@ -21,4 +21,4 @@ I remain generally curious about various questions across astrophysics, includin
 Outside of astronomy, I spend most of my time playing basketball, tennis, skateboarding, and generally being outside.
 
 # Contact
-**cshariat@caltech.edu**.
+**cshariat@caltech.edu**
