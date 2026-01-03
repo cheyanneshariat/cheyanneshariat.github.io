@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I'm a 2nd year Ph.D. student in Astrophysics at the California Institute of Technology, advised by [Kareem El-Badry](https://kareemelbadry.github.io/) and often working closely with [Smadar Naoz](https://snaoz.astro.ucla.edu/) (UCLA).
+Hi there! I'm a 2nd year Ph.D. student in Astrophysics at the California Institute of Technology, advised by [Kareem El-Badry](https://kareemelbadry.github.io/).
 
 # Research
 My research focuses on the **formation and evolution of multiple-star systems**, particularly binaries and triples. Triple star systems are [common](https://ui.adsabs.harvard.edu/abs/2025PASP..137i4201S/abstract) and dynamically rich, offering a natural laboratory for studying [stellar interactions](https://ui.adsabs.harvard.edu/abs/2025ApJ...978...47S/abstract), [population evolution](https://ui.adsabs.harvard.edu/abs/2023ApJ...955L..14S/abstract), and the origins of [exotic](https://ui.adsabs.harvard.edu/abs/2025ApJ...983..115S/abstract) [stellar phenomena](https://ui.adsabs.harvard.edu/abs/2025PASP..137g4201S/abstract). 
@@ -20,5 +20,3 @@ I remain generally curious about various questions across astrophysics, includin
 
 Outside of astronomy, I spend most of my time playing basketball, tennis, skateboarding, and generally being outside.
 
-# Contact
-**cshariat@caltech.edu**
