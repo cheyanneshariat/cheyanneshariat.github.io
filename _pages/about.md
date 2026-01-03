@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I’m a Ph.D. student in Astrophysics at the California Institute of Technology (advised by [Kareem El-Badry](https://kareemelbadry.github.io/)).
+Hi there! I’m a Ph.D. student in Astrophysics at the California Institute of Technology, advised by [Kareem El-Badry](https://kareemelbadry.github.io/).
 I study how **stars form, interact, and evolve in multiple-star systems**, particularly binaries and triples.
 
 # Research
