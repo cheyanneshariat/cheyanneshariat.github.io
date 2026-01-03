@@ -175,7 +175,7 @@
 .greedy-nav {
   position: relative;
   min-width: 250px;
-  background: #d6b994; // default: var(--global-bg-color);
+  background: var(--global-bg-color); // default: var(--global-bg-color);
 
   a {
     display: block;
@@ -197,8 +197,8 @@
     padding: 0 0.5rem;
     border: 0;
     outline: none;
-    background-color: #d6b994; // default: var(--global-base-color);
-    color: #d6b994; // default: #fff;
+    background-color: var(--global-base-color); // default: var(--global-base-color);
+    color: #fff; // default: #fff;
     cursor: pointer;
     z-index: 100;
   }
