@@ -22,7 +22,7 @@ I enjoy working at the intersection of theory and observation. On the theoretica
 
 I remain generally curious about various questions across astrophysics, including studying stellar populations in [other galaxies](https://ui.adsabs.harvard.edu/abs/2025arXiv250904555S/abstract), measuring precise [stellar ages](https://ui.adsabs.harvard.edu/abs/2025arXiv251008675S/abstract), and (occasionally) studying [exoplanets](https://ui.adsabs.harvard.edu/abs/2024ApJ...964L..13S/abstract).
 
-Outside of astronomy, I spend most of my time playing basketball and tennis, skateboarding, and generally being outside.
+Outside of astronomy, I spend most of my time playing basketball and tennis, skateboarding, and generally being outdoors.
 
 I am always happy to chat, so don’t hesitate to reach out: **cshariat@caltech.edu**.
 
