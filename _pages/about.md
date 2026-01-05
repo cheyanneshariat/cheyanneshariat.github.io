@@ -12,9 +12,9 @@ I study how **stars form, interact, and evolve in multiple-star systems**, parti
 
 # Research
 The majority of stars have companions, making binary and triple star systems a fundamental component of stellar populations.
-My work focuses on understanding the physical processes that shape the evolution of these systems and their population demographics.
+My work focuses on understanding the physical processes that shape the evolution of multiple star systems and their population demographics.
 
-Triple star systems are [common](https://ui.adsabs.harvard.edu/abs/2025PASP..137i4201S/abstract) and dynamically rich, offering a natural laboratory for studying [stellar mergers](https://ui.adsabs.harvard.edu/abs/2025ApJ...978...47S/abstract), [population evolution](https://ui.adsabs.harvard.edu/abs/2023ApJ...955L..14S/abstract), and the origins of [exotic](https://ui.adsabs.harvard.edu/abs/2025ApJ...983..115S/abstract) [stellar phenomena](https://ui.adsabs.harvard.edu/abs/2025PASP..137g4201S/abstract). Much of my work on triples is carried out in collaboration with [Smadar Naoz (UCLA)](https://snaoz.astro.ucla.edu/), focusing on how three-body dynamics couple to stellar evolution and mass transfer. 
+Triple star systems are [common](https://ui.adsabs.harvard.edu/abs/2025PASP..137i4201S/abstract) and dynamically rich, offering a natural laboratory for studying [stellar mergers](https://ui.adsabs.harvard.edu/abs/2025ApJ...978...47S/abstract), [population evolution](https://ui.adsabs.harvard.edu/abs/2023ApJ...955L..14S/abstract), and the origins of [exotic](https://astrobites.org/2025/12/22/triple-double-do-merging-white-dwarfs-produce-frb-emitting-remnants/) [stellar](https://ui.adsabs.harvard.edu/abs/2025ApJ...983..115S/abstract) [phenomena](https://ui.adsabs.harvard.edu/abs/2025PASP..137g4201S/abstract). Much of my work on triples is carried out in collaboration with [Smadar Naoz (UCLA)](https://snaoz.astro.ucla.edu/), focusing on how three-body dynamics couple to stellar evolution and mass transfer. 
 
 ![Illustration of Accreting Binary in Triple](/images/CV_Triple.jpg){: .align-center width="1000px"}
 *A Triple Love Story (image from ["Third Wheel" Star Brings Companions Closer Together](https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together)).*
