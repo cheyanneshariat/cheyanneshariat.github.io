@@ -11,7 +11,7 @@ Hi there! I’m a 2nd year Ph.D. student in Astrophysics at the California Insti
 My research studies how **stars form, interact, and evolve in multiple-star systems**, particularly binaries and triples.
 
 ![Illustration of Accreting Binary in Triple](/images/CV_Triple.jpg){: .align-center width="1000px"}
-*A Triple Love Story (image from ["Third Wheel" Star Brings Companions Closer Together](https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together)).*
+*<small>image from ["Third Wheel" Star Brings Companions Closer Together](https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together).</small>*
 
 I enjoy working at the intersection of theory and observation. On the theoretical side, I model the long-term evolution of binary and triple star systems using detailed simulations and population synthesis frameworks. I am equally interested in confronting these models with the real world: testing predictions against observations and letting them inform one another. On the observational side, I use data from ground- and space-based facilities -- including *Gaia*, *JWST*, *HST*, Palomar, and Keck -- and especially enjoy exploring large-scale surveys.
 
