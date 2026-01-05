@@ -30,8 +30,8 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Media"
-    url: /media/
+  # - title: "Media"
+  #   url: /media/
 
   - title: "Contact"
     url: /contact/
