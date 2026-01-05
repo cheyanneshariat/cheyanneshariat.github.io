@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-The majority of stars have companions, making binary and triple star systems a fundamental component of stellar populations.
+The majority of stars have companions, making binary and triple star systems a fundamental part of stellar populations.
 My work focuses on understanding the physical processes that shape the evolution of multiple star systems and their population-wide properties.
 
 ## Triple star systems
