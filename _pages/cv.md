@@ -22,6 +22,6 @@ redirect_from:
 * Undergraduate Student Researcher, UCLA, 2022-2024
 * Summer Undergraduate Research Fellow, NASA Jet Propulsion Laboratory (JPL), 2023
 * Summer Undergraduate Research Fellow, Caltech, 2022
-* High School Researcher, UCLA, 2019-2021
+* High School Researcher, UCLA Neurology, 2019-2021
 
 
