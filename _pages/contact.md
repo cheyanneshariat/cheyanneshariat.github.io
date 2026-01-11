@@ -5,5 +5,5 @@ permalink: /contact/
 author_profile: true
 ---
 
-**Email:** cshariat@caltech.edu
+**email:** cshariat@caltech.edu
 
