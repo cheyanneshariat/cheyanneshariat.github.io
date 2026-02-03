@@ -1,5 +1,13 @@
 {% if site.analytics.provider and page.analytics != false %}
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTL01FN6DV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WTL01FN6DV');
+
 {% case site.analytics.provider %}
 {% when "google" %}
   {% include /analytics-providers/google.html %}
