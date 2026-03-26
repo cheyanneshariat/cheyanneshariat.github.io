@@ -7,9 +7,13 @@ author_profile: true
 
 {% include base_path %}
 
+## Triple Double
+
+Triple Double: Do Merging White Dwarfs Produce Fast Radio Burst–Emitting Remnants? ([astrobites]((https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together)), [aasnova](https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together))
+
 ## A Triple Love Story
 
-["Third Wheel" Star Brings Companions Closer Together](https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together)
+["Third Wheel" Star Brings Companions Closer Together (Caltech)](https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together)
 
 ## Department of Energy + Computation
 
