@@ -9,7 +9,7 @@ author_profile: true
 
 <h2 style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.48rem;">
   <img src="/images/overcite-logo.png" alt="OverCite logo" width="38">
-  <span style="font-size: 1.25em;">OverCite</span>
+  <span style="font-size: 1.3em;">OverCite</span>
 </h2>
 
 <p style="font-size: 1.12em; line-height: 1.5;">
