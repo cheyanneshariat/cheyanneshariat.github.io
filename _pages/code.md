@@ -1,22 +1,13 @@
 ---
 layout: archive
-title: "Code"
+title: "Code & Data"
 permalink: /code/
 author_profile: true
 ---
 
 {% include base_path %}
 
-Public software and data
-
-## OverCite
-
-<p style="display:flex; align-items:flex-start; gap:1rem;">
-  <span style="flex:1;">
-    A citation tool for LaTeX that helps you find papers and insert BibTeX entries without leaving Overleaf or VS Code.
-  </span>
-  <img src="/images/overcite-logo.png" alt="OverCite logo" width="88">
-</p>
+## <img src="/images/overcite-logo.png" alt="OverCite logo" width="44" style="vertical-align: middle; margin-right: 0.45rem;"> OverCite
 
 - [Chrome Web Store](https://chromewebstore.google.com/detail/overcite/hmjojciemhnfkjnilakhehkgkhkplbdo)
 - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=CheyanneShariat.overcite-vscode)
@@ -34,7 +25,6 @@ The repository includes the `WDMS_EBs.csv` catalog and associated data products 
 ## Gaia Triples
 
 Data and code from the Gaia Resolved Triples project, Shariat, El-Badry, & Naoz (2025). 
-The repository includes the public catalog, higher-order multiple samples, and **a notebook for generating mock triple populations**.
 
 - [GitHub repository](https://github.com/cheyanneshariat/gaia_triples)
 - [Paper: 10,000 Resolved Triples from Gaia: Empirical Constraints on Triple Star Populations](https://ui.adsabs.harvard.edu/abs/2025PASP..137i4201S/abstract)
