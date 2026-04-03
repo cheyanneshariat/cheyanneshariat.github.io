@@ -2,11 +2,10 @@
    Various functions that we want to use within the template
    ========================================================================== */
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
+// Determine the expected state of the theme toggle. Default is "light".
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
-  return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
+  return (themeSetting != "dark" && themeSetting != "light") ? "light" : themeSetting;
 };
 
 // Determine the computed theme, which can be "dark" or "light". If the theme setting is
@@ -20,7 +19,8 @@ let determineComputedTheme = () => {
 };
 
 // detect OS/browser preference
-const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+// const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+const browserPref = 'light';
 
 // Set the theme on page load or when explicitly called
 let setTheme = (theme) => {
