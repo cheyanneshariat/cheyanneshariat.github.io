@@ -7,13 +7,20 @@ author_profile: true
 
 {% include base_path %}
 
-## <img src="/images/overcite-logo.png" alt="OverCite logo" width="44" style="vertical-align: middle; margin-right: 0.45rem;"> OverCite
+<h2 style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+  <span style="font-size: 1.25em;">OverCite</span>
+  <img src="/images/overcite-logo.png" alt="OverCite logo" width="72">
+</h2>
 
-A citation tool for LaTeX that helps you find papers and insert BibTeX entries without leaving Overleaf or VS Code.
+<p style="font-size: 1.12em; line-height: 1.5;">
+  A citation tool for LaTeX that helps you find papers and insert BibTeX entries without leaving Overleaf or VS Code.
+</p>
 
-- [Chrome Web Store](https://chromewebstore.google.com/detail/overcite/hmjojciemhnfkjnilakhehkgkhkplbdo)
-- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=CheyanneShariat.overcite-vscode)
-- [GitHub repository](https://github.com/cheyanneshariat/OverCite)
+<ul style="font-size: 1.08em; line-height: 1.7;">
+  <li><a href="https://chromewebstore.google.com/detail/overcite/hmjojciemhnfkjnilakhehkgkhkplbdo">Chrome Web Store</a></li>
+  <li><a href="https://marketplace.visualstudio.com/items?itemName=CheyanneShariat.overcite-vscode">VS Code Marketplace</a></li>
+  <li><a href="https://github.com/cheyanneshariat/OverCite">GitHub repository</a></li>
+</ul>
 
 ## PCEBs
 
