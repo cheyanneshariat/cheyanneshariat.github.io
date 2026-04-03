@@ -9,6 +9,8 @@ author_profile: true
 
 ## <img src="/images/overcite-logo.png" alt="OverCite logo" width="44" style="vertical-align: middle; margin-right: 0.45rem;"> OverCite
 
+A citation tool for LaTeX that helps you find papers and insert BibTeX entries without leaving Overleaf or VS Code.
+
 - [Chrome Web Store](https://chromewebstore.google.com/detail/overcite/hmjojciemhnfkjnilakhehkgkhkplbdo)
 - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=CheyanneShariat.overcite-vscode)
 - [GitHub repository](https://github.com/cheyanneshariat/OverCite)
