@@ -7,9 +7,9 @@ author_profile: true
 
 {% include base_path %}
 
-<h2 style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
-  <span style="font-size: 1.25em;">OverCite</span>
-  <img src="/images/overcite-logo.png" alt="OverCite logo" width="72">
+<h2 style="font-size: 2em; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+  <img src="/images/overcite-logo.png" alt="OverCite logo" width="52">
+  <span>OverCite</span>
 </h2>
 
 <p style="font-size: 1.12em; line-height: 1.5;">
