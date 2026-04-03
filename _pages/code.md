@@ -11,15 +11,16 @@ Public software and data
 
 ## OverCite
 
-<img src="/images/overcite-logo.png" alt="OverCite logo" width="92" style="float:right; margin-left: 1rem; margin-top: 0.25rem;">
-
-A citation tool for LaTeX that helps you find papers and insert BibTeX entries without leaving Overleaf or VS Code.
+<p style="display:flex; align-items:flex-start; gap:1rem;">
+  <span style="flex:1;">
+    A citation tool for LaTeX that helps you find papers and insert BibTeX entries without leaving Overleaf or VS Code.
+  </span>
+  <img src="/images/overcite-logo.png" alt="OverCite logo" width="88">
+</p>
 
 - [Chrome Web Store](https://chromewebstore.google.com/detail/overcite/hmjojciemhnfkjnilakhehkgkhkplbdo)
 - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=CheyanneShariat.overcite-vscode)
 - [GitHub repository](https://github.com/cheyanneshariat/OverCite)
-
-<br style="clear: both;">
 
 ## PCEBs
 
@@ -38,4 +39,4 @@ The repository includes the public catalog, higher-order multiple samples, and *
 - [GitHub repository](https://github.com/cheyanneshariat/gaia_triples)
 - [Paper: 10,000 Resolved Triples from Gaia: Empirical Constraints on Triple Star Populations](https://ui.adsabs.harvard.edu/abs/2025PASP..137i4201S/abstract)
 
-The repository includes the public catalog, higher-order multiple samples, and a notebook for generating mock triple populations.
+The repository includes the public catalog (`triples_catalog.csv`) and **a notebook for generating mock triple populations** (`sampling_triples.ipynb`).
