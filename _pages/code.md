@@ -13,7 +13,7 @@ author_profile: true
 </h2>
 
 <p style="font-size: 1.12em; line-height: 1.5;">
-  A citation tool for LaTeX that helps you find papers and insert BibTeX entries without leaving Overleaf or VS Code.
+  A citation tool for LaTeX that helps you find papers and insert BibTeX entries without leaving the editor.
 </p>
 
 <ul style="font-size: 1.08em; line-height: 1.7;">
