@@ -33,6 +33,9 @@ main:
   - title: "Media"
     url: /media/
 
+  - title: "Code"
+    url: /code/
+
   - title: "Contact"
     url: /contact/
     
