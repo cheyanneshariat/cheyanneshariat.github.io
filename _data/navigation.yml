@@ -30,12 +30,12 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Media"
-    url: /media/
-
   - title: "Code"
     url: /code/
 
+  - title: "Media"
+    url: /media/
+    
   - title: "Contact"
     url: /contact/
     
