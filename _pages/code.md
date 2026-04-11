@@ -33,9 +33,9 @@ The repository includes the `WDMS_EBs.csv` catalog and associated data products 
 
 ## Gaia Triples
 
-Data and code from the Gaia Resolved Triples project, Shariat, El-Badry, & Naoz (2025). 
+Generating a realistic stellar population including **single, binary, and triple stars** (from Shariat, El-Badry, & Naoz 2025).
 
 - [GitHub repository](https://github.com/cheyanneshariat/gaia_triples)
 - [Paper: 10,000 Resolved Triples from Gaia: Empirical Constraints on Triple Star Populations](https://ui.adsabs.harvard.edu/abs/2025PASP..137i4201S/abstract)
 
-The repository includes the public catalog (`triples_catalog.csv`) and **a notebook for generating mock triple populations** (`sampling_triples.ipynb`).
+The repository also includes the public catalog (`triples_catalog.csv`) and **a notebook demo** (`sampling_triples.ipynb`).
