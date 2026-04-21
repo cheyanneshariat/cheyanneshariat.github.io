@@ -7,6 +7,11 @@ author_profile: true
 
 {% include base_path %}
 
+<p style="font-size: 1.05em; line-height: 1.6; margin-bottom: 1.2rem;">
+  For a full list of code, data products, and ongoing projects, see
+  <a href="https://github.com/cheyanneshariat">my GitHub</a>.
+</p>
+
 <h2 style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.48rem;">
   <img src="/images/overcite-logo.png" alt="OverCite logo" width="38">
   <span style="font-size: 1.25em;">OverCite</span>
