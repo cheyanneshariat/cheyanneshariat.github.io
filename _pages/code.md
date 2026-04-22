@@ -18,7 +18,7 @@ author_profile: true
 </h2>
 
 <p style="font-size: 1.12em; line-height: 1.5;">
-  A tool to add citations in LaTeX *without leaving the editor*
+  A tool to add citations in LaTeX without leaving the editor
 </p>
 
 <ul style="font-size: 1.08em; line-height: 1.7;">
