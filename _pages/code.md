@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 <p style="font-size: 1.05em; line-height: 1.6; margin-bottom: 1.2rem;">
-  For a full list of code, data, and ongoing projects, see
+  For a list of code, data, and ongoing projects, see
   <a href="https://github.com/cheyanneshariat">my GitHub</a>.
 </p>
 
