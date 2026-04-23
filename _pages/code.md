@@ -9,7 +9,7 @@ author_profile: true
 
 <p style="font-size: 1.05em; line-height: 1.6; margin-bottom: 1.2rem;">
   For a list of code, data, and ongoing projects, see
-  <a href="https://github.com/cheyanneshariat">my GitHub</a>.
+  <a href="https://github.com/cheyanneshariat"> GitHub</a>.
 </p>
 
 <h2 style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.48rem;">
