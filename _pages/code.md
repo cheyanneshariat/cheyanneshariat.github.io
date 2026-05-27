@@ -27,6 +27,17 @@ author_profile: true
   <li><a href="https://github.com/cheyanneshariat/OverCite">GitHub repository</a></li>
 </ul>
 
+<h2 style="margin-top: 2rem;">Neutron Stars</h2>
+
+<p style="font-size: 1.12em; line-height: 1.5;">
+  Interactive version of the neutron-star population number--rate figure from Shariat et al. (2026).
+</p>
+
+<ul style="font-size: 1.08em; line-height: 1.7;">
+  <li><a href="/code/ns-populations/">Open interactive figure</a></li>
+</ul>
+
+
 ## PCEBs
 
 A public catalog of eclipsing detached post-common-envelope white dwarf-main-sequence binaries, released with Shariat & El-Badry (2026).

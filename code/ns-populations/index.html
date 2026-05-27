@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NS Populations</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css?v=20260527r" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Gaia NS demographics</p>
+        <h1 id="page-title">NS populations</h1>
+      </div>
+      <div class="topbar-actions">
+        <button id="reset-all" class="secondary-button" type="button">Reset</button>
+        <button id="download-svg" class="ghost-button" type="button">SVG</button>
+        <button id="download-png" class="ghost-button" type="button">PNG</button>
+        <button id="download-pdf" class="ghost-button" type="button">PDF</button>
+      </div>
+    </header>
+
+    <section class="workspace" aria-label="Interactive plotting workspace">
+      <aside class="control-card" aria-label="Population controls">
+        <div class="control-topline">
+          <div>
+            <label class="field-label" for="population-select">Population</label>
+            <select id="population-select"></select>
+          </div>
+          <button id="reset-population" class="ghost-button compact" type="button">Reset row</button>
+        </div>
+
+        <section class="control-section color-section" aria-labelledby="color-title">
+          <div class="section-title-row">
+            <h2 id="color-title">Color</h2>
+            <span id="color-swatch" class="color-swatch" aria-hidden="true"></span>
+          </div>
+          <input id="hue-slider" class="hue-slider" type="range" min="0" max="360" step="1" aria-label="color hue" />
+          <output id="hue-output" class="small-output" for="hue-slider"></output>
+        </section>
+
+        <section class="control-section" aria-labelledby="input-title">
+          <h2 id="input-title">Inputs</h2>
+          <div class="segmented" role="radiogroup" aria-label="Choose two active inputs">
+            <label><input type="radio" name="input-pair" value="N_tau" /> <span>N + tau</span></label>
+            <label><input type="radio" name="input-pair" value="N_rate" /> <span>N + rate</span></label>
+            <label><input type="radio" name="input-pair" value="tau_rate" /> <span>tau + rate</span></label>
+          </div>
+        </section>
+
+        <section class="control-section" aria-labelledby="values-title">
+          <h2 id="values-title">Ranges</h2>
+          <div id="range-grid" class="range-grid"></div>
+        </section>
+
+        <section class="derived-card" aria-live="polite">
+          <strong id="selected-summary"></strong>
+          <p id="derived-summary"></p>
+        </section>
+
+        <button id="copy-link" class="ghost-button copy-button" type="button">Copy state URL</button>
+      </aside>
+
+      <section class="figure-card" aria-label="Interactive figure">
+        <div class="figure-toolbar">
+          <div class="figure-title-row">
+            <strong>Figure 5</strong>
+            <span class="figure-citation">Shariat et al. (2026)</span>
+          </div>
+          <label class="toggle-label"><input id="label-toggle" type="checkbox" checked /> labels</label>
+        </div>
+        <div id="plot-host" class="plot-host"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js?v=20260527r"></script>
+</body>
+</html>
