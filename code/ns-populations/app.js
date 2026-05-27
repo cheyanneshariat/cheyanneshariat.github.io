@@ -183,6 +183,7 @@ const state = {
   populations: structuredClone(DEFAULT_POPULATIONS),
   selectedId: "gaia_ns",
   showLabels: true,
+  shownCollapsed: false,
   lifetimeLabels: structuredClone(DEFAULT_LIFETIME_LABELS),
 };
 
@@ -191,6 +192,9 @@ const hueSlider = document.getElementById("hue-slider");
 const hueOutput = document.getElementById("hue-output");
 const swatch = document.getElementById("color-swatch");
 const rangeGrid = document.getElementById("range-grid");
+const shownToggle = document.getElementById("shown-toggle");
+const visibilityPanel = document.getElementById("visibility-panel");
+const visibilityGrid = document.getElementById("visibility-grid");
 const selectedSummary = document.getElementById("selected-summary");
 const derivedSummary = document.getElementById("derived-summary");
 const plotHost = document.getElementById("plot-host");
@@ -302,6 +306,10 @@ function clientToSvg(svgEl, event) {
 
 function selectedPopulation() {
   return state.populations.find((pop) => pop.id === state.selectedId) ?? state.populations[0];
+}
+
+function isVisible(pop) {
+  return pop.visible !== false;
 }
 
 function activeVariables(pop) {
@@ -508,6 +516,7 @@ function drawLifetimeLines(root) {
 }
 
 function drawPopulation(root, pop) {
+  if (!isVisible(pop)) return;
   const row = rowFromPopulation(pop);
   if (!(row.n > 0 && row.r > 0)) return;
   const group = svg("g", { class: "population-layer", "data-population": pop.id });
@@ -567,6 +576,7 @@ function drawPopulation(root, pop) {
 
 function drawPopulationLabels(layer) {
   for (const pop of state.populations) {
+    if (!isVisible(pop)) continue;
     const row = rowFromPopulation(pop);
     if (!(row.n > 0 && row.r > 0)) continue;
     const [dx, dy, anchor] = pop.offset;
@@ -767,6 +777,7 @@ function renderControls() {
   document.querySelectorAll("input[name='input-pair']").forEach((radio) => {
     radio.checked = radio.value === pop.use;
   });
+  renderVisibilityControls();
 
   const active = new Set(activeVariables(pop));
   const d = deriveTriplets(pop);
@@ -803,10 +814,32 @@ function renderControls() {
   });
   rangeGrid.replaceChildren(...rows);
 
-  selectedSummary.textContent = pop.display;
+  selectedSummary.textContent = `${pop.display}${isVisible(pop) ? "" : " (hidden)"}`;
   const activeText = activeVariables(pop).map((v) => VARIABLE_META[v].label).join(" + ");
   let derivedKey = ["N", "tau", "rate"].find((v) => !active.has(v));
   derivedSummary.textContent = `${activeText} inputs; derived ${VARIABLE_META[derivedKey].label} = ${fmt(row[derivedKey === "N" ? "n" : derivedKey === "tau" ? "t" : "r"], 2)} ${VARIABLE_META[derivedKey].unit}`;
+}
+
+function renderVisibilityControls() {
+  shownToggle.setAttribute("aria-expanded", String(!state.shownCollapsed));
+  visibilityPanel.classList.toggle("collapsed", state.shownCollapsed);
+  visibilityPanel.hidden = state.shownCollapsed;
+  visibilityGrid.replaceChildren(...state.populations.map((pop) => {
+    const label = document.createElement("label");
+    label.className = "visibility-pill";
+    label.style.setProperty("--pop-color", hsl(pop, 1));
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.checked = isVisible(pop);
+    input.dataset.population = pop.id;
+    input.addEventListener("change", handleVisibilityChange);
+    const dot = document.createElement("span");
+    dot.className = "visibility-dot";
+    const text = document.createElement("span");
+    text.textContent = pop.display;
+    label.append(input, dot, text);
+    return label;
+  }));
 }
 
 function normalizeTriplet(values) {
@@ -852,6 +885,7 @@ function resetAll() {
   state.populations = structuredClone(DEFAULT_POPULATIONS);
   state.lifetimeLabels = structuredClone(DEFAULT_LIFETIME_LABELS);
   state.selectedId = "gaia_ns";
+  state.shownCollapsed = false;
   populateSelect();
   renderControls();
   renderPlot();
@@ -860,6 +894,7 @@ function resetAll() {
 function serializeState() {
   const compact = state.populations.map((pop) => ({
     id: pop.id,
+    visible: isVisible(pop),
     use: pop.use,
     hue: pop.hue,
     light: pop.light,
@@ -884,7 +919,7 @@ function hydrateFromUrl() {
     for (const update of incomingPopulations ?? []) {
       const target = state.populations.find((pop) => pop.id === update.id);
       if (!target) continue;
-      for (const key of ["use", "hue", "light", "N", "tau", "rate", "offset"]) {
+      for (const key of ["visible", "use", "hue", "light", "N", "tau", "rate", "offset"]) {
         if (update[key] !== undefined) target[key] = update[key];
       }
     }
@@ -897,6 +932,25 @@ function hydrateFromUrl() {
   } catch (err) {
     console.warn("Could not read URL state", err);
   }
+}
+
+function handleVisibilityChange(event) {
+  const pop = state.populations.find((item) => item.id === event.target.dataset.population);
+  if (!pop) return;
+  pop.visible = event.target.checked;
+  renderControls();
+  renderPlot();
+}
+
+function setAllVisibility(value) {
+  for (const pop of state.populations) pop.visible = value;
+  renderControls();
+  renderPlot();
+}
+
+function toggleShownSection() {
+  state.shownCollapsed = !state.shownCollapsed;
+  renderVisibilityControls();
 }
 
 async function copyUrlState() {
@@ -1063,6 +1117,9 @@ function bindEvents() {
   });
   document.getElementById("reset-population").addEventListener("click", resetPopulation);
   document.getElementById("reset-all").addEventListener("click", resetAll);
+  shownToggle.addEventListener("click", toggleShownSection);
+  document.getElementById("show-all").addEventListener("click", () => setAllVisibility(true));
+  document.getElementById("hide-all").addEventListener("click", () => setAllVisibility(false));
   document.getElementById("copy-link").addEventListener("click", copyUrlState);
   document.getElementById("download-svg").addEventListener("click", downloadSvg);
   document.getElementById("download-png").addEventListener("click", downloadPng);

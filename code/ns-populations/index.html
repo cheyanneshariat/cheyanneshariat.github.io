@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NS Populations</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260527r" />
+  <link rel="stylesheet" href="styles.css?v=20260527t" />
 </head>
 <body>
   <main class="page-shell">
@@ -31,6 +31,23 @@
           </div>
           <button id="reset-population" class="ghost-button compact" type="button">Reset row</button>
         </div>
+
+        <section class="control-section" aria-labelledby="shown-title">
+          <div class="section-title-row">
+            <h2 id="shown-title">
+              <button id="shown-toggle" class="section-toggle" type="button" aria-expanded="true" aria-controls="visibility-panel">
+                <span>Shown</span><span class="section-toggle-icon" aria-hidden="true">▾</span>
+              </button>
+            </h2>
+            <div class="mini-actions">
+              <button id="show-all" class="mini-button" type="button">all</button>
+              <button id="hide-all" class="mini-button" type="button">none</button>
+            </div>
+          </div>
+          <div id="visibility-panel" class="visibility-panel">
+            <div id="visibility-grid" class="visibility-grid"></div>
+          </div>
+        </section>
 
         <section class="control-section color-section" aria-labelledby="color-title">
           <div class="section-title-row">
@@ -76,6 +93,6 @@
     </section>
   </main>
 
-  <script src="app.js?v=20260527r"></script>
+  <script src="app.js?v=20260527t"></script>
 </body>
 </html>
