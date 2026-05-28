@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "PaperSerif";
+  src: url("fonts/STIXGeneral.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PaperSerif";
+  src: url("fonts/STIXGeneralBol.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --ink: #16110c;
   --muted: #6e665c;
@@ -18,7 +34,7 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  font-family: "PaperSerif", "STIXGeneral", "Times New Roman", serif;
   background:
     radial-gradient(circle at 10% 5%, rgba(246, 214, 160, 0.55), transparent 32rem),
     radial-gradient(circle at 95% 15%, rgba(183, 219, 228, 0.55), transparent 34rem),
@@ -271,6 +287,40 @@ select:focus,
   text-align: right;
 }
 
+.color-tools {
+  display: grid;
+  grid-template-columns: auto 42px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.color-picker-label {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.color-picker {
+  width: 42px;
+  height: 28px;
+  border: 1px solid rgba(30, 24, 18, 0.18);
+  border-radius: 999px;
+  background: transparent;
+  padding: 2px;
+}
+
+.color-picker::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.color-picker::-webkit-color-swatch {
+  border: 0;
+  border-radius: 999px;
+}
+
 .segmented {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -487,7 +537,7 @@ select:focus,
 
 .figure-citation {
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 1.04rem;
 }
 
 .toggle-label {
@@ -516,39 +566,27 @@ select:focus,
   transition: opacity 140ms ease, stroke-width 140ms ease, r 140ms ease;
 }
 
-.population-layer:hover .range-bar {
-  stroke-width: 6.4;
-  opacity: 0.88;
-}
-
-.population-layer[data-population="gaia_ns"]:hover .range-bar {
-  stroke-width: 8.2;
-}
-
-.population-layer:hover .point-marker {
-  r: 18;
-}
 
 .axis-label,
 .tick-label,
 .lifetime-label,
 .population-label {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "PaperSerif", "STIXGeneral", "Times New Roman", serif;
 }
 
 .axis-label {
   fill: #0f0b07;
-  font-size: 38px;
+  font-size: 48px;
 }
 
 .tick-label {
   fill: #0f0b07;
-  font-size: 27px;
+  font-size: 36px;
 }
 
 .lifetime-label {
   fill: #626262;
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .lifetime-label,

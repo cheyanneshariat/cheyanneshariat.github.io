@@ -1,6 +1,6 @@
 const SVG_WIDTH = 1380;
-const SVG_HEIGHT = 820;
-const MARGIN = { top: 34, right: 48, bottom: 132, left: 138 };
+const SVG_HEIGHT = 920;
+const MARGIN = { top: 40, right: 50, bottom: 158, left: 182 };
 const PLOT = {
   x0: MARGIN.left,
   y0: MARGIN.top,
@@ -8,7 +8,7 @@ const PLOT = {
   height: SVG_HEIGHT - MARGIN.top - MARGIN.bottom,
   xmin: 9,
   xmax: 5e8,
-  ymin: 2e-8,
+  ymin: 6e-8,
   ymax: 7e-2,
 };
 
@@ -18,13 +18,14 @@ const DEFAULT_POPULATIONS = [
     label: "magnetars",
     display: "magnetars",
     use: "N_tau",
+    color: "royalblue",
     hue: 225,
     sat: 74,
     light: 56,
-    N: [30, 100, 1000],
+    N: [30, 100, 300],
     tau: [1e4, 3e4, 1e5],
     rate: [3e-4, 3e-3, 5e-2],
-    offset: [1.55, 0.62, "start"],
+    offset: [3.5, 2.15, "start"],
     cap: [5e-4, 5e-2],
   },
   {
@@ -32,13 +33,14 @@ const DEFAULT_POPULATIONS = [
     label: "ordinary radio pulsars",
     display: "radio PSRs",
     use: "tau_rate",
+    color: "brown",
     hue: 0,
     sat: 55,
     light: 42,
     N: [1e5, 1e6, 2e6],
     tau: [1e7, 4e7, 1e8],
     rate: [3e-3, 1.6e-2, 2.5e-2],
-    offset: [0.70, 1.85, "start"],
+    offset: [0.7, 2.15, "end"],
     cap: [5e-3, 5e-2],
   },
   {
@@ -46,104 +48,112 @@ const DEFAULT_POPULATIONS = [
     label: "Be XRBs / Be+NS",
     display: "Be XRBs",
     use: "N_tau",
+    color: "#e66100",
     hue: 24,
     sat: 100,
     light: 45,
     N: [3e2, 1e4, 5e4],
     tau: [1e7, 3e7, 1e8],
     rate: [5e-5, 3e-4, 2e-3],
-    offset: [0.72, 6.00, "start"],
+    offset: [0.4, 9.0, "start"],
   },
   {
     id: "sghmxbs",
     label: "sgHMXBs",
     display: "sgHMXBs",
     use: "N_tau",
+    color: "#CD5B04",
     hue: 24,
     sat: 95,
     light: 41,
     N: [50, 100, 250],
     tau: [1e4, 1e5, 1e6],
     rate: [5e-5, 1e-3, 2.5e-2],
-    offset: [1.62, 0.72, "start"],
+    offset: [2.65, 1.25, "start"],
   },
   {
     id: "syxbs",
     label: "SyXBs",
     display: "SyXBs",
     use: "N_tau",
+    color: "crimson",
     hue: 345,
     sat: 78,
     light: 50,
     N: [30, 300, 1000],
     tau: [3e6, 1e7, 3e7],
     rate: [3e-6, 3e-5, 3e-4],
-    offset: [0.72, 0.34, "start"],
+    offset: [0.8, 0.32, "end"],
   },
   {
     id: "lmxbs",
     label: "LMXBs",
     display: "LMXBs",
     use: "N_tau",
+    color: "darkviolet",
     hue: 278,
     sat: 78,
     light: 47,
-    N: [3e2, 1000, 4e4],
+    N: [3e2, 2.5e3, 4e4],
     tau: [5e8, 1e9, 5e9],
-    rate: [6e-8, 1e-6, 8e-5],
-    offset: [0.58, 0.22, "start"],
+    rate: [6e-8, 2.5e-6, 8e-5],
+    offset: [0.5, 0.20, "end"],
   },
   {
     id: "spiders",
     label: "spider pulsars",
     display: "spiders",
     use: "N_tau",
+    color: "#009e73",
     hue: 162,
     sat: 90,
     light: 34,
     N: [3e2, 2000, 6000],
-    tau: [1e8, 1e9, 1e9],
-    rate: [3e-7, 2e-6, 1e-5],
-    offset: [0.95, 4.50, "start"],
+    tau: [1e9, 5e9, 1e10],
+    rate: [3e-8, 4e-7, 6e-6],
+    offset: [1.35, 5.0, "end"],
   },
   {
     id: "psr_wd",
     label: "recycled pulsar+WD",
     display: "PSR+WD",
     use: "N_tau",
+    color: "#626CFC",
     hue: 237,
     sat: 92,
     light: 68,
     N: [1.5e4, 3e4, 5e4],
     tau: [1e9, 5e9, 1e10],
     rate: [1.5e-6, 8e-6, 5e-5],
-    offset: [2.35, 1.65, "start"],
+    offset: [3.1, 1.25, "start"],
   },
   {
     id: "dns",
     label: "Galactic DNSs",
     display: "DNSs",
     use: "N_tau",
+    color: "#0072b2",
     hue: 201,
     sat: 100,
     light: 35,
     N: [3e3, 2.5e4, 1e5],
     tau: [3e8, 6.25e8, 5e9],
     rate: [6e-7, 4e-5, 3e-4],
-    offset: [1.25, 1.28, "start"],
+    offset: [1.35, 1.2, "start"],
   },
   {
     id: "gaia_ns",
     label: "Gaia detached NS--MS",
     display: "Gaia NSs",
     use: "N_tau",
+    color: "#e31a1c",
     hue: 0,
     sat: 86,
     light: 53,
     N: [1e4, 3e4, 1e5],
     tau: [1e9, 7e9, 1e10],
     rate: [1e-6, 5e-6, 2e-5],
-    offset: [0.84, 0.34, "start"],
+    offset: [3.5, 0.1, "end"],
     highlight: true,
   },
   {
@@ -151,13 +161,14 @@ const DEFAULT_POPULATIONS = [
     label: "dormant isolated NSs",
     display: "dormant NSs",
     use: "tau_rate",
+    color: "#111827",
     hue: 217,
     sat: 42,
     light: 12,
     N: [3e7, 1e8, 3e8],
     tau: [1e9, 5e9, 1.4e10],
     rate: [3e-3, 1.6e-2, 2.5e-2],
-    offset: [0.82, 0.20, "end"],
+    offset: [1.5, 0.25, "end"],
     cap: [1e-3, 5e-2],
   },
 ];
@@ -173,10 +184,10 @@ const PAIR_VARIABLES = {
   tau_rate: ["tau", "rate"],
 };
 const DEFAULT_LIFETIME_LABELS = {
-  "1e4": { tau: 1e4, x: 22, y: 2.1e-2, power: 4, prefix: "τ = ", suffix: " yr", anchor: "start" },
-  "1e6": { tau: 1e6, x: 3.4e3, y: 1.3e-2, power: 6, prefix: "", anchor: "start" },
-  "1e8": { tau: 1e8, x: 1.8e5, y: 1.5e-3, power: 8, prefix: "", anchor: "start" },
-  "1e10": { tau: 1e10, x: 1.8e6, y: 7.0e-4, power: 10, prefix: "", anchor: "middle" },
+  "1e4": { tau: 1e4, x: 20, y: 2.2e-2, power: 4, prefix: "τ = ", suffix: " yr", anchor: "start" },
+  "1e6": { tau: 1e6, x: 4.0e3, y: 1.8e-2, power: 6, prefix: "", anchor: "start" },
+  "1e8": { tau: 1e8, x: 2.0e5, y: 2.0e-3, power: 8, prefix: "", anchor: "start" },
+  "1e10": { tau: 1e10, x: 6.0e6, y: 1.1e-3, power: 10, prefix: "", anchor: "end" },
 };
 
 const state = {
@@ -190,6 +201,7 @@ const state = {
 const populationSelect = document.getElementById("population-select");
 const hueSlider = document.getElementById("hue-slider");
 const hueOutput = document.getElementById("hue-output");
+const colorPicker = document.getElementById("color-picker");
 const swatch = document.getElementById("color-swatch");
 const rangeGrid = document.getElementById("range-grid");
 const shownToggle = document.getElementById("shown-toggle");
@@ -229,7 +241,19 @@ function fmt(value, digits = 2) {
 }
 
 function hsl(pop, alpha = 1) {
+  if (pop.color) {
+    if (alpha >= 0.999) return pop.color;
+    return `color-mix(in srgb, ${pop.color} ${Math.round(alpha * 100)}%, transparent)`;
+  }
   return `hsla(${pop.hue}, ${pop.sat}%, ${pop.light}%, ${alpha})`;
+}
+
+function colorToHex(color) {
+  const canvas = colorToHex.canvas ?? (colorToHex.canvas = document.createElement("canvas"));
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#000000";
+  ctx.fillStyle = color;
+  return ctx.fillStyle;
 }
 
 function svgTextAnchor(anchor) {
@@ -252,31 +276,45 @@ function svg(tag, attrs = {}, children = []) {
 
 function svgEmbeddedStyle() {
   return `
+    @font-face {
+      font-family: "PaperSerif";
+      src: url("fonts/STIXGeneral.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "PaperSerif";
+      src: url("fonts/STIXGeneralBol.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
     .axis-label, .tick-label, .lifetime-label, .population-label {
-      font-family: Georgia, serif;
+      font-family: "PaperSerif", "STIXGeneral", "Times New Roman", serif;
     }
     .axis-label {
       fill: #0f0b07;
-      font-size: 38px;
+      font-size: 48px;
     }
     .tick-label {
       fill: #0f0b07;
-      font-size: 27px;
+      font-size: 36px;
     }
     .lifetime-label {
       fill: #626262;
-      font-size: 28px;
-    }
-    .lifetime-label, .population-label {
+      font-size: 32px;
       paint-order: stroke;
       stroke: rgba(255, 255, 255, 0.9);
-      stroke-width: 6px;
+      stroke-width: 4px;
       stroke-linejoin: round;
-      font-family: Georgia, serif;
+    }
+    .population-label {
+      paint-order: stroke;
+      stroke: rgba(255, 255, 255, 0.82);
+      stroke-width: 3px;
+      stroke-linejoin: round;
     }
   `;
 }
-
 function xScale(value) {
   const lx = (log10(value) - log10(PLOT.xmin)) / (log10(PLOT.xmax) - log10(PLOT.xmin));
   return PLOT.x0 + lx * PLOT.width;
@@ -465,40 +503,40 @@ function addLabelHitbox(group, attrs, x, y, text, fontSize, anchor, extraClass) 
 function drawAxes(root) {
   const axis = svg("g", { class: "axes" });
   const { x0, y0, width, height } = PLOT;
-  axis.appendChild(svg("rect", { x: x0, y: y0, width, height, fill: "none", stroke: "#0f0b07", "stroke-width": 2.2 }));
+  axis.appendChild(svg("rect", { x: x0, y: y0, width, height, fill: "none", stroke: "#0f0b07", "stroke-width": 2.0 }));
 
   const xPowers = [1, 2, 3, 4, 5, 6, 7, 8];
   for (const p of xPowers) {
     const x = xScale(10 ** p);
-    axis.appendChild(svg("line", { x1: x, y1: y0 + height, x2: x, y2: y0 + height - 14, stroke: "#0f0b07", "stroke-width": 2.2 }));
-    axis.appendChild(svg("line", { x1: x, y1: y0, x2: x, y2: y0 + 14, stroke: "#0f0b07", "stroke-width": 2.2 }));
-    axis.appendChild(tenPowerLabel({ x, y: y0 + height + 48, "text-anchor": "middle", class: "tick-label" }, p));
+    axis.appendChild(svg("line", { x1: x, y1: y0 + height, x2: x, y2: y0 + height - 12, stroke: "#0f0b07", "stroke-width": 2.0 }));
+    axis.appendChild(svg("line", { x1: x, y1: y0, x2: x, y2: y0 + 12, stroke: "#0f0b07", "stroke-width": 2.0 }));
+    axis.appendChild(tenPowerLabel({ x, y: y0 + height + 58, "text-anchor": "middle", class: "tick-label" }, p));
     for (let m = 2; m < 10; m += 1) {
       const val = m * 10 ** p;
       if (val <= PLOT.xmin || val >= PLOT.xmax) continue;
       const xm = xScale(val);
-      axis.appendChild(svg("line", { x1: xm, y1: y0 + height, x2: xm, y2: y0 + height - 7, stroke: "#0f0b07", "stroke-width": 1.35 }));
-      axis.appendChild(svg("line", { x1: xm, y1: y0, x2: xm, y2: y0 + 7, stroke: "#0f0b07", "stroke-width": 1.35 }));
+      axis.appendChild(svg("line", { x1: xm, y1: y0 + height, x2: xm, y2: y0 + height - 6, stroke: "#0f0b07", "stroke-width": 1.25 }));
+      axis.appendChild(svg("line", { x1: xm, y1: y0, x2: xm, y2: y0 + 6, stroke: "#0f0b07", "stroke-width": 1.25 }));
     }
   }
 
   const yPowers = [-7, -6, -5, -4, -3, -2];
   for (const p of yPowers) {
     const y = yScale(10 ** p);
-    axis.appendChild(svg("line", { x1: x0, y1: y, x2: x0 + 14, y2: y, stroke: "#0f0b07", "stroke-width": 2.2 }));
-    axis.appendChild(svg("line", { x1: x0 + width, y1: y, x2: x0 + width - 14, y2: y, stroke: "#0f0b07", "stroke-width": 2.2 }));
-    axis.appendChild(tenPowerLabel({ x: x0 - 25, y: y + 9, "text-anchor": "end", class: "tick-label" }, p));
+    axis.appendChild(svg("line", { x1: x0, y1: y, x2: x0 + 14, y2: y, stroke: "#0f0b07", "stroke-width": 2.0 }));
+    axis.appendChild(svg("line", { x1: x0 + width, y1: y, x2: x0 + width - 14, y2: y, stroke: "#0f0b07", "stroke-width": 2.0 }));
+    axis.appendChild(tenPowerLabel({ x: x0 - 34, y: y + 9, "text-anchor": "end", class: "tick-label" }, p));
     for (let m = 2; m < 10; m += 1) {
       const val = m * 10 ** p;
       if (val <= PLOT.ymin || val >= PLOT.ymax) continue;
       const ym = yScale(val);
-      axis.appendChild(svg("line", { x1: x0, y1: ym, x2: x0 + 7, y2: ym, stroke: "#0f0b07", "stroke-width": 1.35 }));
-      axis.appendChild(svg("line", { x1: x0 + width, y1: ym, x2: x0 + width - 7, y2: ym, stroke: "#0f0b07", "stroke-width": 1.35 }));
+      axis.appendChild(svg("line", { x1: x0, y1: ym, x2: x0 + 7, y2: ym, stroke: "#0f0b07", "stroke-width": 1.25 }));
+      axis.appendChild(svg("line", { x1: x0 + width, y1: ym, x2: x0 + width - 7, y2: ym, stroke: "#0f0b07", "stroke-width": 1.25 }));
     }
   }
 
-  axis.appendChild(svg("text", { x: x0 + width / 2, y: SVG_HEIGHT - 35, "text-anchor": "middle", class: "axis-label" }, ["N in Galaxy"]));
-  const yAxisLabel = svg("text", { x: 42, y: y0 + height / 2, "text-anchor": "middle", class: "axis-label", transform: `rotate(-90 42 ${y0 + height / 2})` });
+  axis.appendChild(svg("text", { x: x0 + width / 2, y: SVG_HEIGHT - 44, "text-anchor": "middle", class: "axis-label" }, ["N in Galaxy"]));
+  const yAxisLabel = svg("text", { x: 50, y: y0 + height / 2, "text-anchor": "middle", class: "axis-label", transform: `rotate(-90 50 ${y0 + height / 2})` });
   yAxisLabel.appendChild(document.createTextNode("birth rate (yr"));
   yAxisLabel.appendChild(svg("tspan", { "baseline-shift": "super", "font-size": "62%" }, ["-1"]));
   yAxisLabel.appendChild(document.createTextNode(")"));
@@ -510,7 +548,7 @@ function drawLifetimeLines(root) {
   const lines = svg("g", { class: "lifetime-lines" });
   for (const tau of [1e4, 1e6, 1e8, 1e10]) {
     const d = linePathForTau(tau);
-    if (d) lines.appendChild(svg("path", { d, fill: "none", stroke: "#c8c8c8", "stroke-width": 3.2, "stroke-dasharray": "9 9", opacity: 0.85 }));
+    if (d) lines.appendChild(svg("path", { d, fill: "none", stroke: "#c8c8c8", "stroke-width": 3.0, "stroke-dasharray": "9 9", opacity: 0.82 }));
   }
   root.appendChild(lines);
 }
@@ -526,7 +564,7 @@ function drawPopulation(root, pop) {
   uncertaintyBars(pop).forEach((bar, index) => {
     const [[x0Data, y0Data], [x1Data, y1Data]] = clipBarToRateCap(pop, bar.points[0], bar.points[1]);
     const opacity = index === 0 ? (isGaia ? 0.94 : 0.72) : (isGaia ? 0.70 : 0.42);
-    const width = isGaia ? 7.0 : 5.0;
+    const width = isGaia ? 4.2 : 3.2;
     const x0 = xScale(x0Data);
     const y0 = yScale(y0Data);
     const x1 = xScale(x1Data);
@@ -548,7 +586,7 @@ function drawPopulation(root, pop) {
       group.appendChild(svg("circle", {
         cx,
         cy,
-        r: isGaia ? 5.2 : 4.4,
+        r: isGaia ? 4.2 : 3.4,
         fill: color,
         opacity,
         stroke: "none",
@@ -563,10 +601,10 @@ function drawPopulation(root, pop) {
   group.appendChild(svg("circle", {
     cx: x,
     cy: y,
-    r: isGaia ? 17 : 14,
+    r: isGaia ? 16 : 14,
     fill: color,
     stroke: isGaia ? "#0f0b07" : "white",
-    "stroke-width": isGaia ? 4 : 3,
+    "stroke-width": isGaia ? 2.8 : 2.4,
     "clip-path": "url(#plot-clip)",
     class: "point-marker",
   }));
@@ -580,12 +618,12 @@ function drawPopulationLabels(layer) {
     const row = rowFromPopulation(pop);
     if (!(row.n > 0 && row.r > 0)) continue;
     const [dx, dy, anchor] = pop.offset;
-    const lx = logClamp(row.n * dx, PLOT.xmin * 1.22, PLOT.xmax / 1.38);
-    const ly = logClamp(row.r * dy, PLOT.ymin * 2.2, PLOT.ymax / 1.65);
+    const lx = logClamp(row.n * dx, PLOT.xmin * 1.01, PLOT.xmax / 1.01);
+    const ly = logClamp(row.r * dy, PLOT.ymin * 1.01, PLOT.ymax / 1.01);
     const labelX = xScale(lx);
     const labelY = yScale(ly);
     const isGaia = pop.highlight;
-    const fontSize = isGaia ? 41 : 31;
+    const fontSize = isGaia ? 52 : 38;
     const anchorMode = svgTextAnchor(anchor);
     const hitAttrs = {
       "data-label-kind": "population",
@@ -612,7 +650,7 @@ function drawLifetimeLabels(layer) {
     const y = yScale(logClamp(item.y, PLOT.ymin * 1.8, PLOT.ymax / 1.35));
     const anchor = svgTextAnchor(item.anchor);
     const labelText = `${item.prefix ?? ""}10${item.power}${item.suffix ?? ""}`;
-    const fontSize = 28;
+    const fontSize = 32;
     const hitAttrs = {
       "data-label-kind": "lifetime",
       "data-lifetime": key,
@@ -773,6 +811,7 @@ function renderControls() {
   hueSlider.value = String(pop.hue);
   hueOutput.value = `${pop.hue}°`;
   swatch.style.background = hsl(pop);
+  colorPicker.value = colorToHex(hsl(pop));
   hueSlider.style.setProperty("--accent", hsl(pop));
   document.querySelectorAll("input[name='input-pair']").forEach((radio) => {
     radio.checked = radio.value === pop.use;
@@ -896,6 +935,7 @@ function serializeState() {
     id: pop.id,
     visible: isVisible(pop),
     use: pop.use,
+    color: pop.color,
     hue: pop.hue,
     light: pop.light,
     N: pop.N,
@@ -919,7 +959,7 @@ function hydrateFromUrl() {
     for (const update of incomingPopulations ?? []) {
       const target = state.populations.find((pop) => pop.id === update.id);
       if (!target) continue;
-      for (const key of ["visible", "use", "hue", "light", "N", "tau", "rate", "offset"]) {
+      for (const key of ["visible", "use", "color", "hue", "light", "N", "tau", "rate", "offset"]) {
         if (update[key] !== undefined) target[key] = update[key];
       }
     }
@@ -1109,6 +1149,13 @@ function bindEvents() {
   hueSlider.addEventListener("input", (event) => {
     const pop = selectedPopulation();
     pop.hue = Number(event.target.value);
+    delete pop.color;
+    renderControls();
+    renderPlot();
+  });
+  colorPicker.addEventListener("input", (event) => {
+    const pop = selectedPopulation();
+    pop.color = event.target.value;
     renderControls();
     renderPlot();
   });

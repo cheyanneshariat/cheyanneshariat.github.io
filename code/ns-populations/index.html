@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NS Populations</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260527t" />
+  <link rel="stylesheet" href="styles.css?v=20260528c" />
 </head>
 <body>
   <main class="page-shell">
@@ -55,7 +55,11 @@
             <span id="color-swatch" class="color-swatch" aria-hidden="true"></span>
           </div>
           <input id="hue-slider" class="hue-slider" type="range" min="0" max="360" step="1" aria-label="color hue" />
-          <output id="hue-output" class="small-output" for="hue-slider"></output>
+          <div class="color-tools">
+            <label class="color-picker-label" for="color-picker">exact</label>
+            <input id="color-picker" class="color-picker" type="color" aria-label="exact color" />
+            <output id="hue-output" class="small-output" for="hue-slider"></output>
+          </div>
         </section>
 
         <section class="control-section" aria-labelledby="input-title">
@@ -93,6 +97,6 @@
     </section>
   </main>
 
-  <script src="app.js?v=20260527t"></script>
+  <script src="app.js?v=20260528c"></script>
 </body>
 </html>
