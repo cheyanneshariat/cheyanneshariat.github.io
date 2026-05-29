@@ -17,160 +17,171 @@ const DEFAULT_POPULATIONS = [
     id: "magnetars",
     label: "magnetars",
     display: "magnetars",
+    visible: true,
     use: "N_tau",
     color: "royalblue",
     hue: 225,
     sat: 74,
     light: 56,
     N: [30, 100, 300],
-    tau: [1e4, 3e4, 1e5],
-    rate: [3e-4, 3e-3, 5e-2],
-    offset: [3.5, 2.15, "start"],
-    cap: [5e-4, 5e-2],
+    tau: [10000, 30000, 100000],
+    rate: [0.0003, 0.003, 0.05],
+    offset: [3.10955, 1.29343, "start"],
+    cap: [0.0005, 0.05],
   },
   {
     id: "ordinary_radio_pulsars",
     label: "ordinary radio pulsars",
     display: "radio PSRs",
+    visible: true,
     use: "tau_rate",
     color: "brown",
     hue: 0,
     sat: 55,
     light: 42,
-    N: [1e5, 1e6, 2e6],
-    tau: [1e7, 4e7, 1e8],
-    rate: [3e-3, 1.6e-2, 2.5e-2],
-    offset: [0.7, 2.15, "end"],
-    cap: [5e-3, 5e-2],
+    N: [100000, 1000000, 2000000],
+    tau: [10000000, 40000000, 200000000],
+    rate: [0.003, 0.016, 0.025],
+    offset: [0.865504, 1.6953, "end"],
+    cap: [0.005, 0.05],
   },
   {
     id: "be_xrbs",
     label: "Be XRBs / Be+NS",
     display: "Be XRBs",
+    visible: true,
     use: "N_tau",
     color: "#e66100",
     hue: 24,
     sat: 100,
     light: 45,
-    N: [3e2, 1e4, 5e4],
-    tau: [1e7, 3e7, 1e8],
-    rate: [5e-5, 3e-4, 2e-3],
-    offset: [0.4, 9.0, "start"],
+    N: [300, 1500, 10000],
+    tau: [10000000, 20000000, 100000000],
+    rate: [5e-05, 0.0003, 0.002],
+    offset: [10.1433, 4.03793, "start"],
   },
   {
     id: "sghmxbs",
     label: "sgHMXBs",
     display: "sgHMXBs",
+    visible: true,
     use: "N_tau",
     color: "#CD5B04",
     hue: 24,
     sat: 95,
     light: 41,
-    N: [50, 100, 250],
-    tau: [1e4, 1e5, 1e6],
-    rate: [5e-5, 1e-3, 2.5e-2],
-    offset: [2.65, 1.25, "start"],
+    N: [50, 100, 200],
+    tau: [10000, 100000, 1000000],
+    rate: [5e-05, 0.001, 0.025],
+    offset: [1.47937, 0.514265, "start"],
   },
   {
     id: "syxbs",
     label: "SyXBs",
     display: "SyXBs",
+    visible: true,
     use: "N_tau",
     color: "crimson",
     hue: 345,
     sat: 78,
     light: 50,
-    N: [30, 300, 1000],
-    tau: [3e6, 1e7, 3e7],
-    rate: [3e-6, 3e-5, 3e-4],
-    offset: [0.8, 0.32, "end"],
+    N: [8, 300, 600],
+    tau: [1000000, 10000000, 30000000],
+    rate: [3e-06, 3e-05, 0.0003],
+    offset: [0.735295, 0.062414, "end"],
   },
   {
     id: "lmxbs",
     label: "LMXBs",
     display: "LMXBs",
+    visible: true,
     use: "N_tau",
     color: "darkviolet",
     hue: 278,
     sat: 78,
     light: 47,
-    N: [3e2, 2.5e3, 4e4],
-    tau: [5e8, 1e9, 5e9],
-    rate: [6e-8, 2.5e-6, 8e-5],
-    offset: [0.5, 0.20, "end"],
+    N: [300, 2500, 30000],
+    tau: [500000000, 5000000000, 10000000000],
+    rate: [6e-08, 2.5e-06, 8e-05],
+    offset: [5.87757, 0.179808, "end"],
   },
   {
     id: "spiders",
     label: "spider pulsars",
     display: "spiders",
+    visible: true,
     use: "N_tau",
     color: "#009e73",
     hue: 162,
     sat: 90,
     light: 34,
-    N: [3e2, 2000, 6000],
-    tau: [1e9, 5e9, 1e10],
-    rate: [3e-8, 4e-7, 6e-6],
-    offset: [1.35, 5.0, "end"],
+    N: [300, 2000, 6000],
+    tau: [1000000000, 3000000000, 10000000000],
+    rate: [3e-08, 4e-07, 6e-06],
+    offset: [0.19473, 0.272925, "end"],
   },
   {
     id: "psr_wd",
     label: "recycled pulsar+WD",
     display: "PSR+WD",
+    visible: true,
     use: "N_tau",
     color: "#626CFC",
     hue: 237,
     sat: 92,
     light: 68,
-    N: [1.5e4, 3e4, 5e4],
-    tau: [1e9, 5e9, 1e10],
-    rate: [1.5e-6, 8e-6, 5e-5],
-    offset: [3.1, 1.25, "start"],
+    N: [10000, 20000, 30300],
+    tau: [1000000000, 3000000000, 14000000000],
+    rate: [1.5e-06, 8e-06, 5e-05],
+    offset: [0.592395, 0.0982358, "start"],
   },
   {
     id: "dns",
     label: "Galactic DNSs",
     display: "DNSs",
+    visible: true,
     use: "N_tau",
     color: "#0072b2",
     hue: 201,
     sat: 100,
     light: 35,
-    N: [3e3, 2.5e4, 1e5],
-    tau: [3e8, 6.25e8, 5e9],
-    rate: [6e-7, 4e-5, 3e-4],
-    offset: [1.35, 1.2, "start"],
+    N: [3000, 10000, 30000],
+    tau: [100000000, 1000000000, 14000000000],
+    rate: [6e-07, 4e-05, 0.0003],
+    offset: [1.69131, 4.70086, "start"],
   },
   {
     id: "gaia_ns",
     label: "Gaia detached NS--MS",
     display: "Gaia NSs",
+    visible: true,
     use: "N_tau",
     color: "#e31a1c",
     hue: 0,
     sat: 86,
     light: 53,
-    N: [1e4, 3e4, 1e5],
-    tau: [1e9, 7e9, 1e10],
-    rate: [1e-6, 5e-6, 2e-5],
-    offset: [3.5, 0.1, "end"],
+    N: [10000, 30000, 100000],
+    tau: [1000000000, 5000000000, 14000000000],
+    rate: [1e-06, 5e-06, 2e-05],
+    offset: [52.1311, 0.558905, "end"],
     highlight: true,
   },
   {
     id: "dormant_ns",
     label: "dormant isolated NSs",
     display: "dormant NSs",
+    visible: true,
     use: "tau_rate",
     color: "#111827",
     hue: 217,
     sat: 42,
     light: 12,
-    N: [3e7, 1e8, 3e8],
-    tau: [1e9, 5e9, 1.4e10],
-    rate: [3e-3, 1.6e-2, 2.5e-2],
-    offset: [1.5, 0.25, "end"],
-    cap: [1e-3, 5e-2],
-  },
+    N: [30000000, 100000000, 300000000],
+    tau: [5000000000, 8000000000, 14000000000],
+    rate: [0.003, 0.016, 0.025],
+    offset: [2.37711, 0.0719991, "end"],
+    cap: [0.001, 0.05],
+  }
 ];
 
 const VARIABLE_META = {
@@ -184,10 +195,10 @@ const PAIR_VARIABLES = {
   tau_rate: ["tau", "rate"],
 };
 const DEFAULT_LIFETIME_LABELS = {
-  "1e4": { tau: 1e4, x: 20, y: 2.2e-2, power: 4, prefix: "τ = ", suffix: " yr", anchor: "start" },
-  "1e6": { tau: 1e6, x: 4.0e3, y: 1.8e-2, power: 6, prefix: "", anchor: "start" },
-  "1e8": { tau: 1e8, x: 2.0e5, y: 2.0e-3, power: 8, prefix: "", anchor: "start" },
-  "1e10": { tau: 1e10, x: 6.0e6, y: 1.1e-3, power: 10, prefix: "", anchor: "end" },
+  "1e4": { tau: 10000, x: 24.9078, y: 0.0263484, power: 4, prefix: "τ = ", suffix: " yr", anchor: "start" },
+  "1e6": { tau: 1000000, x: 5334.93, y: 0.0118436, power: 6, prefix: "", anchor: "start" },
+  "1e8": { tau: 100000000, x: 98922.6, y: 0.00218908, power: 8, prefix: "", anchor: "start" },
+  "1e10": { tau: 10000000000, x: 3352430.26683, y: 0.00032188779126, power: 10, prefix: "", anchor: "end" },
 };
 
 const state = {
@@ -195,6 +206,7 @@ const state = {
   selectedId: "gaia_ns",
   showLabels: true,
   shownCollapsed: false,
+  barWidthScale: 1,
   lifetimeLabels: structuredClone(DEFAULT_LIFETIME_LABELS),
 };
 
@@ -202,6 +214,8 @@ const populationSelect = document.getElementById("population-select");
 const hueSlider = document.getElementById("hue-slider");
 const hueOutput = document.getElementById("hue-output");
 const colorPicker = document.getElementById("color-picker");
+const barWidthSlider = document.getElementById("bar-width-slider");
+const barWidthOutput = document.getElementById("bar-width-output");
 const swatch = document.getElementById("color-swatch");
 const rangeGrid = document.getElementById("range-grid");
 const shownToggle = document.getElementById("shown-toggle");
@@ -557,14 +571,23 @@ function drawPopulation(root, pop) {
   if (!isVisible(pop)) return;
   const row = rowFromPopulation(pop);
   if (!(row.n > 0 && row.r > 0)) return;
-  const group = svg("g", { class: "population-layer", "data-population": pop.id });
+  const group = svg("g", {
+    class: "population-layer",
+    "data-population": pop.id,
+    "data-selected": String(pop.id === state.selectedId),
+    tabindex: "0",
+    role: "button",
+    "aria-label": `Select ${pop.display}`,
+  });
   const color = hsl(pop, 1);
   const isGaia = pop.highlight;
+  group.appendChild(svg("title", {}, [`${pop.display}: N=${fmt(row.n, 3)}, rate=${fmt(row.r, 3)} yr^-1`]));
 
   uncertaintyBars(pop).forEach((bar, index) => {
     const [[x0Data, y0Data], [x1Data, y1Data]] = clipBarToRateCap(pop, bar.points[0], bar.points[1]);
     const opacity = index === 0 ? (isGaia ? 0.94 : 0.72) : (isGaia ? 0.70 : 0.42);
-    const width = isGaia ? 4.2 : 3.2;
+    const width = (isGaia ? 4.2 : 3.2) * state.barWidthScale;
+    const capScale = Math.sqrt(state.barWidthScale);
     const x0 = xScale(x0Data);
     const y0 = yScale(y0Data);
     const x1 = xScale(x1Data);
@@ -586,7 +609,7 @@ function drawPopulation(root, pop) {
       group.appendChild(svg("circle", {
         cx,
         cy,
-        r: isGaia ? 4.2 : 3.4,
+        r: (isGaia ? 4.2 : 3.4) * capScale,
         fill: color,
         opacity,
         stroke: "none",
@@ -773,6 +796,27 @@ function attachLabelDrag(root) {
   });
 }
 
+function attachPopulationSelection(root) {
+  root.querySelectorAll(".population-layer").forEach((layer) => {
+    const selectPopulation = () => {
+      const id = layer.dataset.population;
+      if (!id || state.selectedId === id) return;
+      state.selectedId = id;
+      renderControls();
+      renderPlot();
+    };
+    layer.addEventListener("pointerdown", (event) => {
+      if (event.target.closest?.(".draggable-label, .draggable-label-hit")) return;
+      selectPopulation();
+    });
+    layer.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      selectPopulation();
+    });
+  });
+}
+
 function renderPlot() {
   const root = svg("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -791,6 +835,7 @@ function renderPlot() {
   for (const pop of state.populations) drawPopulation(root, pop);
   drawAxes(root);
   drawForegroundLabels(root);
+  attachPopulationSelection(root);
   attachLabelDrag(root);
   plotHost.replaceChildren(root);
 }
@@ -810,6 +855,8 @@ function renderControls() {
   populationSelect.value = pop.id;
   hueSlider.value = String(pop.hue);
   hueOutput.value = `${pop.hue}°`;
+  barWidthSlider.value = String(state.barWidthScale);
+  barWidthOutput.value = `${state.barWidthScale.toFixed(2)}×`;
   swatch.style.background = hsl(pop);
   colorPicker.value = colorToHex(hsl(pop));
   hueSlider.style.setProperty("--accent", hsl(pop));
@@ -925,6 +972,7 @@ function resetAll() {
   state.lifetimeLabels = structuredClone(DEFAULT_LIFETIME_LABELS);
   state.selectedId = "gaia_ns";
   state.shownCollapsed = false;
+  state.barWidthScale = 1;
   populateSelect();
   renderControls();
   renderPlot();
@@ -945,6 +993,7 @@ function serializeState() {
   }));
   return btoa(unescape(encodeURIComponent(JSON.stringify({
     populations: compact,
+    barWidthScale: state.barWidthScale,
     lifetimeLabels: state.lifetimeLabels,
   }))));
 }
@@ -968,6 +1017,9 @@ function hydrateFromUrl() {
         if (!state.lifetimeLabels[key]) continue;
         state.lifetimeLabels[key] = { ...state.lifetimeLabels[key], ...update };
       }
+    }
+    if (!Array.isArray(incoming) && Number.isFinite(Number(incoming.barWidthScale))) {
+      state.barWidthScale = clamp(Number(incoming.barWidthScale), 0.6, 2.2);
     }
   } catch (err) {
     console.warn("Could not read URL state", err);
@@ -1156,6 +1208,11 @@ function bindEvents() {
   colorPicker.addEventListener("input", (event) => {
     const pop = selectedPopulation();
     pop.color = event.target.value;
+    renderControls();
+    renderPlot();
+  });
+  barWidthSlider.addEventListener("input", (event) => {
+    state.barWidthScale = Number(event.target.value);
     renderControls();
     renderPlot();
   });
