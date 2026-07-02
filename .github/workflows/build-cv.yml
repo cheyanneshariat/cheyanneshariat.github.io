@@ -1,0 +1,40 @@
+name: Build CV PDF
+
+on:
+  push:
+    paths:
+      - "cv/**"
+      - ".github/workflows/build-cv.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra
+
+      - name: Compile CV
+        run: bash scripts/build_cv.sh
+
+      - name: Commit generated CV PDF
+        run: |
+          if git diff --quiet -- files/Shariat_Cheyanne_CV.pdf; then
+            echo "CV PDF is already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add files/Shariat_Cheyanne_CV.pdf
+          git commit -m "Update generated CV PDF"
+          git push

@@ -18,3 +18,13 @@ package-lock.json
 
 # Ignore folders related to IDEs
 .vscode/
+
+# Ignore LaTeX build artifacts for the CV source. The website PDF lives in
+# files/Shariat_Cheyanne_CV.pdf and should remain tracked.
+cv/*.aux
+cv/*.fdb_latexmk
+cv/*.fls
+cv/*.log
+cv/*.out
+cv/*.pdf
+cv/*.synctex.gz
