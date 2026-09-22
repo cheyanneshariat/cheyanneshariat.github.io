@@ -37,7 +37,7 @@ author_profile: true
   <li><a href="/code/ns-populations/">Open interactive figure</a></li>
 </ul>
 
-## M51 Stellar Catalogs & Light Curves
+## Luminous variables in the Whirlpool Galaxy
 
 Panchromatic photometry and time-series light curves for ~100,000 luminous stars in the Whirlpool Galaxy (M51), including variable stars and 173 massive eclipsing-binary candidates, released with [Shariat et al. (2026)](https://ui.adsabs.harvard.edu/abs/2026arXiv260919268S/abstract).
 
