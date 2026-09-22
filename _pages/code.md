@@ -37,7 +37,14 @@ author_profile: true
   <li><a href="/code/ns-populations/">Open interactive figure</a></li>
 </ul>
 
+## M51 Stellar Catalogs & Light Curves
 
+Panchromatic photometry and time-series light curves for ~100,000 luminous stars in the Whirlpool Galaxy (M51), including variable stars and 173 massive eclipsing-binary candidates, released with Shariat et al. (2026).
+
+- [Data and catalogs (Zenodo)](https://doi.org/10.5281/zenodo.22727123)
+- [Paper: A census of massive eclipsing binaries in the Whirlpool Galaxy](https://arxiv.org/abs/2609.19268)
+
+  
 ## PCEBs
 
 A public catalog of eclipsing detached post-common-envelope white dwarf-main-sequence binaries, released with Shariat & El-Badry (2026).
