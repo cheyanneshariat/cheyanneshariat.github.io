@@ -39,7 +39,7 @@ author_profile: true
 
 ## M51 Stellar Catalogs & Light Curves
 
-Panchromatic photometry and time-series light curves for ~100,000 luminous stars in the Whirlpool Galaxy (M51), including variable stars and 173 massive eclipsing-binary candidates, released with Shariat et al. (2026).
+Panchromatic photometry and time-series light curves for ~100,000 luminous stars in the Whirlpool Galaxy (M51), including variable stars and 173 massive eclipsing-binary candidates, released with [Shariat et al. (2026)](https://ui.adsabs.harvard.edu/abs/2026arXiv260919268S/abstract).
 
 - [Data and catalogs (Zenodo)](https://doi.org/10.5281/zenodo.22727123)
 - [Paper: A census of massive eclipsing binaries in the Whirlpool Galaxy](https://arxiv.org/abs/2609.19268)
