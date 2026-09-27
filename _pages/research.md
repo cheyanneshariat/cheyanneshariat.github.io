@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 The majority of stars have companions, making binary and triple star systems a fundamental part of stellar evolution.
-My work focuses on understanding the physical processes that shape the evolution of multiple star systems and their population-wide properties. See [Publications]({{ base_path }}/publications/) page for a full list of papers.
+My work focuses on understanding the physical processes that shape the evolution of multiple star systems and their population-wide properties. See [Publications]({{ base_path }}/publications/) for a full list of papers.
 
 
 
@@ -25,7 +25,7 @@ Binaries are ubiquitous and form the inner building blocks of triples and higher
 *<small>ZTF light curves of eclipsing white dwarf&ndash;main sequence binaries, phase-folded on their orbital periods. From <a href="https://scixplorer.org/abs/2026PASP..138c4202S/abstract">Shariat &amp; El-Badry (2026)</a>.</small>*
 
 ## Broader Interests
-Alongside these core themes, I remain curious about related problems across astrophysics, many of which still involve binaries. These include testing whether [long secondary periods](https://scixplorer.org/abs/2026PASP..138e4202S/abstract) in red giants have a binary origin, studying binaries and stellar populations in other galaxies, from [ultra-faint dwarfs](https://scixplorer.org/abs/2025PASP..137j4103S/abstract) to the [Whirlpool Galaxy](https://scixplorer.org/abs/2026arXiv260919268S/abstract), measuring precise [stellar ages](https://scixplorer.org/abs/2026OJAp....962534S/abstract), and exploring how [stellar companions shape hot Jupiters](https://scixplorer.org/abs/2026arXiv260919249S/abstract) and how [multi-planet systems form](https://scixplorer.org/abs/2024ApJ...964L..13S/abstract).
+Alongside these core themes, I remain curious about related problems across astrophysics, many of which still involve binaries. I have used *Gaia* to test whether [long secondary periods](https://scixplorer.org/abs/2026PASP..138e4202S/abstract) in red giants have a binary origin, studied binaries and stellar populations in other galaxies, from [ultra-faint dwarfs](https://scixplorer.org/abs/2025PASP..137j4103S/abstract) to the [Whirlpool Galaxy](https://scixplorer.org/abs/2026arXiv260919268S/abstract), and measured precise [stellar ages](https://scixplorer.org/abs/2026OJAp....962534S/abstract). I am also interested in planets, including how [stellar companions shape hot Jupiters](https://scixplorer.org/abs/2026arXiv260919249S/abstract) and how [multi-planet systems form](https://scixplorer.org/abs/2024ApJ...964L..13S/abstract).
 
 ![JWST/NIRCam images of ten wide binary candidates in the Bootes I dwarf galaxy](/images/research/booI_wide_binaries_jwst.jpg){: .align-center width="100%"}
 *<small><em>JWST</em>/NIRCam images of wide binary candidates in the ultra-faint dwarf galaxy Bo&ouml;tes I, labeled with the masses of both stars. From <a href="https://scixplorer.org/abs/2025PASP..137j4103S/abstract">Shariat et al. (2025)</a>.</small>*
