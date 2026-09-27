@@ -1,0 +1,21 @@
+# Settings for scripts/update_publications_ads.py (run weekly by
+# .github/workflows/update-publications.yml).
+
+# ADS search query (https://ui.adsabs.harvard.edu/help/search/search-syntax)
+query: author:"Shariat, Cheyanne"
+
+# How your name appears in ADS author lists (used to bold it and to decide
+# first-authorship). Matching is by prefix.
+name_variants:
+  - Shariat, Cheyanne
+  - Shariat, C.
+
+# Record types to list. "abstract" (meeting abstracts) and "dataset" (VizieR
+# catalogs) are left out on purpose.
+doctypes:
+  - article
+  - eprint
+
+# Bibcodes to hide, e.g. a record that is not yours or a duplicate that the
+# automatic preprint matching misses.
+exclude_bibcodes:

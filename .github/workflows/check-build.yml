@@ -1,0 +1,30 @@
+name: Check site build
+
+# Builds the site on every pull request so broken Liquid/Markdown is caught
+# before it reaches the live site. The built site is kept as a downloadable
+# artifact for previewing.
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --strict_front_matter
+        env:
+          JEKYLL_ENV: production
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+          retention-days: 7
