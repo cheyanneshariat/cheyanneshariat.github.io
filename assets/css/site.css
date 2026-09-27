@@ -125,18 +125,18 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
   gap: 1rem;
 }
 
-.nav-brand { font-weight: 650; color: var(--text); text-decoration: none; white-space: nowrap; margin-right: auto; }
+.nav-brand { font-weight: 650; font-size: 1.12rem; color: var(--text); text-decoration: none; white-space: nowrap; margin-right: auto; }
 .nav-brand:hover { color: var(--accent); }
 
 .nav-links { display: flex; gap: 0.25rem; list-style: none; margin: 0; padding: 0; }
 .nav-links li { margin: 0; }
 .nav-links a {
   display: block;
-  padding: 0.3rem 0.6rem;
+  padding: 0.4rem 0.75rem;
   border-radius: 8px;
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1.02rem;
 }
 .nav-links a:hover { color: var(--text); background: var(--accent-soft); }
 .nav-links a[aria-current="page"] { color: var(--text); background: var(--accent-soft); font-weight: 550; }
@@ -336,3 +336,16 @@ figcaption { color: var(--muted); font-size: 0.875rem; line-height: 1.5; margin-
 /* Home: the longer "about" text continues the intro, in the same column. */
 .hero-more { max-width: var(--measure); margin-top: 1rem; }
 .hero-intro p, .hero-more p { margin: 0 0 0.9rem; }
+
+/* Home: quick links under the name. The email button shows the address. */
+.hero-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.9rem; }
+.hero-links .button { font-size: 0.92rem; padding: 0.45rem 0.85rem; }
+.button .icon { width: 1.05em; height: 1.05em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 40rem) {
+  .hero > div { display: contents; }
+  .hero { row-gap: 0.1rem; }
+  .hero h1 { grid-column: 2; grid-row: 1; align-self: end; }
+  .hero-role { grid-column: 2; grid-row: 2; align-self: start; }
+  .hero-photo { grid-column: 1; grid-row: 1 / span 2; }
+  .hero-links { grid-column: 1 / -1; grid-row: 3; margin-top: 0.9rem; }
+}
