@@ -8,7 +8,7 @@ For a list of code, data, and ongoing projects, see [GitHub](https://github.com/
 
 ## <img class="project-logo" src="/images/overcite-logo.png" alt="">OverCite
 
-An extension to add citations in Overleaf without leaving the editor.
+An Overleaf extension to add citations without leaving the editor.
 
 <ul class="brand-links">
   <li><a href="https://chromewebstore.google.com/detail/overcite/hmjojciemhnfkjnilakhehkgkhkplbdo">{% include icons/googlechrome.svg %}Chrome</a></li>
