@@ -359,3 +359,6 @@ svg.brand { width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.4e
 .brand-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; }
 .brand-links li { margin: 0; }
 .brand-links a { white-space: nowrap; }
+
+/* Square project icons: faint outline so dark tiles stay visible in dark mode. */
+img.project-logo[src*="/icons/"] { border-radius: 26%; box-shadow: 0 0 0 1px var(--border); }
