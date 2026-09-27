@@ -320,3 +320,15 @@ figcaption { color: var(--muted); font-size: 0.875rem; line-height: 1.5; margin-
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* A page title followed directly by a section heading (CV, Media). */
+.page-title + h2,
+.page-title + p + h2 { margin-top: 1.25rem; }
+
+/* Two images in one figure: equal height side by side, stacked on phones. */
+.frame.pair { display: flex; gap: 0.75rem; align-items: flex-start; }
+.frame.pair img { min-width: 0; width: 100%; margin: 0; }
+@media (max-width: 40rem) {
+  .frame.pair { flex-direction: column; }
+  .frame.pair img { flex: none !important; }
+}
