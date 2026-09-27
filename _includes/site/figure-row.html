@@ -1,0 +1,16 @@
+{% comment %}
+  Several small titled panels in one row (stacked on phones).
+  Usage: {% include site/figure-row.html panels=site.data.broader_figures caption="Markdown" %}
+  Each panel: title, src, alt, ratio (image width / height, so all panels share one height).
+{% endcomment %}
+<figure>
+  <div class="frame row">
+    {% for p in include.panels %}
+    <div class="panel" style="flex: {{ p.ratio }}">
+      <p class="panel-title">{{ p.title }}</p>
+      <img src="{{ p.src | relative_url }}" alt="{{ p.alt }}" loading="lazy">
+    </div>
+    {% endfor %}
+  </div>
+  {% if include.caption %}<figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" | strip }}</figcaption>{% endif %}
+</figure>

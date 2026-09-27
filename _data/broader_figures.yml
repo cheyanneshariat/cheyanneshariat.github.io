@@ -1,0 +1,14 @@
+# Panels in the Broader Interests figure on the Research page.
+# ratio = image width / height (keeps the panels the same height).
+- title: Long secondary periods
+  src: /images/research/broader_lsp.png
+  alt: Gaia radial velocities and photometry of a red giant with a long secondary period, folded on the 711-day period
+  ratio: 1.074
+- title: Stellar ages
+  src: /images/research/broader_ages.png
+  alt: Ages of the two stars in wide binaries plotted against each other, with the one-to-one line
+  ratio: 1.233
+- title: Hot Jupiters
+  src: /images/research/broader_hj.png
+  alt: Bar chart of the misaligned fraction of hot Jupiters without and with a detected stellar companion
+  ratio: 1.182

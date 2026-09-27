@@ -359,3 +359,14 @@ svg.brand { width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.4e
 .brand-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; }
 .brand-links li { margin: 0; }
 .brand-links a { white-space: nowrap; }
+
+/* Row of small titled panels inside one figure frame. */
+.frame.row { display: flex; gap: 1rem; align-items: flex-end; }
+.frame.row .panel { min-width: 0; }
+.frame.row img { width: 100%; }
+.panel-title { margin: 0 0 0.35rem; font-size: 0.82rem; font-weight: 650; color: #1c1f24; text-align: center; }
+@media (max-width: 40rem) {
+  .frame.row { flex-direction: column; align-items: stretch; }
+  .frame.row .panel { flex: none !important; }
+  .frame.row img { max-width: 22rem; display: block; margin: 0 auto; }
+}
