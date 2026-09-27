@@ -50,7 +50,7 @@ half = 45                                          # box half-size, pixels (0.05
 ax.add_patch(Rectangle((ex - half, ey - half), 2 * half, 2 * half, fill=False, ec="white", lw=2.2, zorder=8))
 
 # inset in the dark region below the legend
-iax = fig.add_axes([0.085, 0.53, 0.29, 0.25])
+iax = fig.add_axes([0.045, 0.56, 0.31, 0.24])
 iax.set_facecolor((0, 0, 0, 0.82))
 for filt, col in (("F606W", "0.85"), ("F814W", "#5aa9ff")):
     sub = lc[lc["filter"].astype(str).str.upper().eq(filt)]
@@ -58,13 +58,13 @@ for filt, col in (("F606W", "0.85"), ("F814W", "#5aa9ff")):
     iax.errorbar(np.r_[ph, ph + 1], np.r_[mg, mg], yerr=np.r_[er, er], fmt="o", ms=3.6, lw=0, elinewidth=0.7,
                  color=col, ecolor=col, alpha=0.85, label=filt, rasterized=True)
 vals = lc["mag_plot"].to_numpy(float); lo, hi = np.nanpercentile(vals, [2, 98]); pad = max(0.12, 0.15 * (hi - lo))
-iax.set_ylim(hi + 2.6 * pad, lo - pad); iax.set_xlim(0, 2); iax.set_xticks([0, 0.5, 1, 1.5])
-iax.set_xlabel("phase", color="white", fontsize=22); iax.set_ylabel("mag", color="white", fontsize=22)
-iax.set_title(rf"ID {SID}; $P = {period:.2f}$ d", color="white", fontsize=22, pad=6)
-iax.tick_params(colors="white", labelsize=16, direction="in", top=True, right=True)
+iax.set_ylim(hi + pad, lo - pad); iax.set_xlim(0, 2); iax.set_xticks([0, 0.5, 1, 1.5])
+iax.set_xticks([]); iax.set_yticks([])          # shape only: no title, labels, or tick values
 for s in iax.spines.values(): s.set_color("white"); s.set_linewidth(1.6)
-leg = iax.legend(loc="lower right", ncol=2, fontsize=15, frameon=False, handletextpad=0.1, columnspacing=0.8, markerscale=1.3, borderaxespad=0.3)
-for t in leg.get_texts(): t.set_color("white")
+# labels sit below the inset, clear of the data: filters as coloured words, period on the right
+iax.text(0.0, -0.035, "F606W", transform=iax.transAxes, ha="left", va="top", color="0.85", fontsize=19)
+iax.text(0.215, -0.035, "F814W", transform=iax.transAxes, ha="left", va="top", color="#5aa9ff", fontsize=19)
+iax.text(1.0, -0.02, rf"$P_{{\rm orb}} = {period:.2f}$ d", transform=iax.transAxes, ha="right", va="top", color="white", fontsize=25)
 
 for (xa, ya), (xb, yb) in (((1, 1), (ex - half, ey + half)), ((1, 0), (ex - half, ey - half))):
     fig.add_artist(ConnectionPatch(xyA=(xa, ya), coordsA=iax.transAxes, xyB=(xb, yb), coordsB=ax.transData,

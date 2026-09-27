@@ -349,3 +349,13 @@ figcaption { color: var(--muted); font-size: 0.875rem; line-height: 1.5; margin-
   .hero-photo { grid-column: 1; grid-row: 1 / span 2; }
   .hero-links { grid-column: 1 / -1; grid-row: 3; margin-top: 0.9rem; }
 }
+
+/* Dark figures shown edge to edge, without the light frame. */
+.frame.bare { background: none; border: 0; padding: 0; overflow: hidden; }
+.frame.bare img { border-radius: var(--radius); }
+
+/* Small brand icons in link lists (Code page). */
+svg.brand { width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.4em; }
+.brand-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; }
+.brand-links li { margin: 0; }
+.brand-links a { white-space: nowrap; }
