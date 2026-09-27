@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 intro: >
-  Hi there! I’m a Ph.D. student in Astrophysics at the California Institute of Technology, working with [Kareem El-Badry](https://kareemelbadry.github.io/), and a [DOE Computational Science Graduate Fellow](https://www.gps.caltech.edu/news-and-events/news/caltech-graduate-student-and-alumna-win-doe-fellowship-for-computational-science).
+  Hi there! I’m a Ph.D. student in Astrophysics at the California Institute of Technology, where I work with [Kareem El-Badry](https://kareemelbadry.github.io/). I’m supported by a [DOE Computational Science Graduate Fellowship](https://www.gps.caltech.edu/news-and-events/news/caltech-graduate-student-and-alumna-win-doe-fellowship-for-computational-science).
   My research studies how **stars form, interact, and evolve in multiple-star systems**, particularly binaries and triples.
 ---
 
