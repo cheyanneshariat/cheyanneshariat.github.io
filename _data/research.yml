@@ -11,10 +11,10 @@
   image: /images/research/cards/pceb_card.png
   alt: Light curves of eclipsing white dwarf-main sequence binaries
   fit: contain
-  text: Binaries are the building blocks of higher-order systems. I constrain the outcomes of binary mass transfer.
+  text: Binaries are the building blocks of higher-order systems. I study binary mass transfer and binary populations in the Milky Way and beyond.
 - title: Broader interests
   anchor: broader-interests
   image: /images/research/cards/hot_jupiter_card.jpg
   alt: Illustration of a hot Jupiter orbiting a star, with a distant stellar companion
   fit: cover
-  text: Related problems, many still involving binaries, from red giants and other galaxies to hot Jupiters.
+  text: Related problems, many still involving binaries, from red giants and stellar ages to hot Jupiters.
