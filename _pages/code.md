@@ -18,7 +18,7 @@ author_profile: true
 </h2>
 
 <p style="font-size: 1.12em; line-height: 1.5;">
-  An extension to add citations in Overleaf without leaving the editor
+  An Overleaf extension to add citations without leaving the editor
 </p>
 
 <ul style="font-size: 1.08em; line-height: 1.7;">
