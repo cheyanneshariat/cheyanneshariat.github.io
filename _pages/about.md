@@ -17,4 +17,4 @@ On the observational side, I utilize data from ground- and space-based facilitie
 
 Outside of astronomy, I spend most of my time playing basketball and tennis, skateboarding, and generally being outdoors.
 
-I am always happy to chat, so don’t hesitate to reach out: [cshariat@caltech.edu](mailto:cshariat@caltech.edu).
+I am always happy to chat, so don’t hesitate to reach out!
