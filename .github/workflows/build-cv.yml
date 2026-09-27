@@ -9,8 +9,10 @@ name: Build CV PDF
 
 on:
   push:
-    paths:
-      - "cv/**"
+    paths:            # LaTeX sources only, so README edits do not rebuild
+      - "cv/**.tex"
+      - "cv/**.cls"
+      - "cv/**.bib"
   schedule:
     - cron: "41 13 * * *"   # daily, 13:41 UTC
   workflow_dispatch:
