@@ -10,6 +10,8 @@ hide_title: true
   </div>
 </section>
 <div class="hero-intro">{{ page.intro | markdownify }}</div>
+
+<div class="about hero-more">{{ content }}</div>
 <div class="buttons">
   <a class="button primary" href="{{ '/research/' | relative_url }}">Research</a>
   <a class="button" href="{{ '/publications/' | relative_url }}">Publications</a>
@@ -32,5 +34,3 @@ hide_title: true
 </div>
 
 
-<div class="section-head wide"><h2>About me</h2></div>
-<div class="about">{{ content }}</div>

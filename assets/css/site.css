@@ -332,3 +332,7 @@ figcaption { color: var(--muted); font-size: 0.875rem; line-height: 1.5; margin-
   .frame.pair { flex-direction: column; }
   .frame.pair img { flex: none !important; }
 }
+
+/* Home: the longer "about" text continues the intro, in the same column. */
+.hero-more { max-width: var(--measure); margin-top: 1rem; }
+.hero-intro p, .hero-more p { margin: 0 0 0.9rem; }

@@ -8,9 +8,9 @@
   text: Triples are common and dynamically rich, making them natural laboratories for stellar mergers and exotic stellar phenomena.
 - title: Binary star systems
   anchor: binary-star-systems
-  image: /images/research/cards/pceb_card.png
-  alt: Light curves of eclipsing white dwarf-main sequence binaries
-  fit: contain
+  image: /images/research/cards/m51_card.jpg
+  alt: Hubble image of the Whirlpool Galaxy (M51)
+  fit: cover
   text: Binaries are the building blocks of higher-order systems. I study binary mass transfer and binary populations in the Milky Way and beyond.
 - title: Broader interests
   anchor: broader-interests
