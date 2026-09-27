@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 The majority of stars have companions, making binary and triple star systems a fundamental part of stellar evolution.
-My work focuses on understanding the physical processes that shape the evolution of multiple star systems and their population-wide properties. You can find my publications on [SciX](https://scixplorer.org/search?q=author%3A%22Shariat%2C%20Cheyanne%22&sort=date%20desc) or [arXiv](https://arxiv.org/search/?searchtype=author&query=Cheyanne%20Shariat).
+My work focuses on understanding the physical processes that shape the evolution of multiple star systems and their population-wide properties. A full list of my papers is on the [Publications]({{ base_path }}/publications/) page.
 
 
 
