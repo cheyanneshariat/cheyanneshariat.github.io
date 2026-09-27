@@ -21,7 +21,7 @@ Triples are [common](https://scixplorer.org/abs/2025PASP..137i4201S/abstract) an
 ## Binary Stars
 Binaries are ubiquitous and form the inner building blocks of triples and higher-order systems. I'm interested in understanding the physical processes that govern binary evolution, such as constraining the outcomes of [binary mass transfer](https://scixplorer.org/abs/2026PASP..138c4202S/abstract), through observations and theoretical modeling. 
 
-{% include site/figure.html src="/images/research/pceb_eclipsing_lightcurves.png" alt="ZTF light curves of three eclipsing white dwarf-main sequence binaries" caption="ZTF light curves of eclipsing white dwarf–main sequence binaries, phase-folded on their orbital periods. From [Shariat & El-Badry (2026)](https://scixplorer.org/abs/2026PASP..138c4202S/abstract)." %}
+{% include site/figure.html src="/images/research/pceb_eclipsing_lightcurves.png" alt="ZTF light curves of three eclipsing white dwarf-main sequence binaries" caption="ZTF light curves of eclipsing white dwarf–main sequence binaries that survived a phase of unstable mass transfer (common-envelope evolution), phase-folded on their orbital periods. From [Shariat & El-Badry (2026)](https://scixplorer.org/abs/2026PASP..138c4202S/abstract)." %}
 
 I also study binary populations in other galaxies, from [ultra-faint dwarfs](https://scixplorer.org/abs/2025PASP..137j4103S/abstract) to the [Whirlpool Galaxy](https://scixplorer.org/abs/2026arXiv260919268S/abstract).
 
