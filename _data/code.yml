@@ -1,0 +1,27 @@
+# Projects on the Code & Data page. Text and links copied from the old page.
+- name: OverCite
+  logo: /images/overcite-logo.png
+  text: A tool to add citations in LaTeX without leaving the editor.
+  links:
+    - { label: Chrome Web Store, url: "https://chromewebstore.google.com/detail/overcite/hmjojciemhnfkjnilakhehkgkhkplbdo" }
+    - { label: VS Code Marketplace, url: "https://marketplace.visualstudio.com/items?itemName=CheyanneShariat.overcite-vscode" }
+    - { label: GitHub, url: "https://github.com/cheyanneshariat/OverCite" }
+- name: Neutron stars
+  text: Interactive version of the neutron-star population number–rate figure from Shariat et al. (2026).
+  links:
+    - { label: Open interactive figure, url: "/code/ns-populations/" }
+- name: Luminous variables in the Whirlpool Galaxy
+  text: Panchromatic photometry and time-series light curves for ~100,000 luminous stars in the Whirlpool Galaxy (M51), including variable stars and 173 massive eclipsing-binary candidates.
+  links:
+    - { label: Data and catalogs (Zenodo), url: "https://doi.org/10.5281/zenodo.22727123" }
+    - { label: Paper, url: "https://scixplorer.org/abs/2026arXiv260919268S/abstract" }
+- name: PCEBs
+  text: A public catalog of eclipsing detached post-common-envelope white dwarf–main sequence binaries, including the WDMS_EBs.csv catalog and associated data products.
+  links:
+    - { label: GitHub, url: "https://github.com/cheyanneshariat/pcebs" }
+    - { label: Paper, url: "https://scixplorer.org/abs/2026PASP..138c4202S/abstract" }
+- name: Gaia Triples
+  text: Generating a realistic stellar population including single, binary, and triple stars. Includes the public catalog (triples_catalog.csv) and a notebook demo (sampling_triples.ipynb).
+  links:
+    - { label: GitHub, url: "https://github.com/cheyanneshariat/gaia_triples" }
+    - { label: Paper, url: "https://scixplorer.org/abs/2025PASP..137i4201S/abstract" }

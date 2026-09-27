@@ -1,64 +1,19 @@
 ---
-layout: archive
+layout: site
 title: "Code & Data"
 permalink: /code/
-author_profile: true
 ---
 
-{% include base_path %}
+Code, data, and ongoing projects are also on [GitHub](https://github.com/cheyanneshariat).
 
-<p style="font-size: 1.05em; line-height: 1.6; margin-bottom: 1.2rem;">
-  For a list of code, data, and ongoing projects, see
-  <a href="https://github.com/cheyanneshariat"> GitHub</a>.
-</p>
-
-<h2 style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.48rem;">
-  <img src="/images/overcite-logo.png" alt="OverCite logo" width="38">
-  <span style="font-size: 1.25em;">OverCite</span>
-</h2>
-
-<p style="font-size: 1.12em; line-height: 1.5;">
-  A tool to add citations in LaTeX without leaving the editor
-</p>
-
-<ul style="font-size: 1.08em; line-height: 1.7;">
-  <li><a href="https://chromewebstore.google.com/detail/overcite/hmjojciemhnfkjnilakhehkgkhkplbdo">Chrome Web Store</a></li>
-  <li><a href="https://marketplace.visualstudio.com/items?itemName=CheyanneShariat.overcite-vscode">VS Code Marketplace</a></li>
-  <li><a href="https://github.com/cheyanneshariat/OverCite">GitHub repository</a></li>
-</ul>
-
-<h2 style="margin-top: 2rem;">Neutron Stars</h2>
-
-<p style="font-size: 1.12em; line-height: 1.5;">
-  Interactive version of the neutron-star population number&ndash;rate figure from Shariat et al. (2026).
-</p>
-
-<ul style="font-size: 1.08em; line-height: 1.7;">
-  <li><a href="/code/ns-populations/">Open interactive figure</a></li>
-</ul>
-
-## Luminous variables in the Whirlpool Galaxy
-
-Panchromatic photometry and time-series light curves for ~100,000 luminous stars in the Whirlpool Galaxy (M51), including variable stars and 173 massive eclipsing-binary candidates.
-
-- [Data and catalogs (Zenodo)](https://doi.org/10.5281/zenodo.22727123)
-- [Paper: A census of massive eclipsing binaries in the Whirlpool Galaxy](https://scixplorer.org/abs/2026arXiv260919268S/abstract)
-
-  
-## PCEBs
-
-A public catalog of eclipsing detached post-common-envelope white dwarf-main-sequence binaries.
-
-- [GitHub repository](https://github.com/cheyanneshariat/pcebs)
-- [Paper: A global view of post-interaction white dwarf-main sequence binaries](https://scixplorer.org/abs/2026arXiv260100439S/abstract)
-
-The repository includes the `WDMS_EBs.csv` catalog and associated data products for the PCEB sample.
-
-## Gaia Triples
-
-Generating a realistic stellar population including **single, binary, and triple stars**.
-
-- [GitHub repository](https://github.com/cheyanneshariat/gaia_triples)
-- [Paper: 10,000 Resolved Triples from Gaia: Empirical Constraints on Triple Star Populations](https://scixplorer.org/abs/2025PASP..137i4201S/abstract)
-
-The repository also includes the public catalog (`triples_catalog.csv`) and **a notebook demo** (`sampling_triples.ipynb`).
+<div class="cards wide">
+{% for c in site.data.code %}
+  <div class="card">
+    <div class="card-body">
+      <p class="card-title">{% if c.logo %}<img class="project-logo" src="{{ c.logo | relative_url }}" alt="">{% endif %}{{ c.name }}</p>
+      <p class="card-text">{{ c.text }}</p>
+      <ul class="link-row">{% for l in c.links %}<li><a href="{{ l.url | relative_url }}">{{ l.label }}</a></li>{% endfor %}</ul>
+    </div>
+  </div>
+{% endfor %}
+</div>

@@ -1,0 +1,20 @@
+# Cards on the home page. Each links to a section of the Research page.
+- title: Triple star systems
+  anchor: triple-star-systems
+  image: /images/research/cards/triple_card.jpg
+  alt: Illustration of an accreting binary star with a distant third star
+  credit: Illustration from Caltech
+  fit: cover
+  text: Triples are common and dynamically rich, making them natural laboratories for stellar mergers and exotic stellar phenomena.
+- title: Binary star systems
+  anchor: binary-star-systems
+  image: /images/research/cards/pceb_card.png
+  alt: Light curves of eclipsing white dwarf-main sequence binaries
+  fit: contain
+  text: Binaries are the building blocks of higher-order systems. I constrain the outcomes of binary mass transfer.
+- title: Broader interests
+  anchor: broader-interests
+  image: /images/research/cards/booI_card.jpg
+  alt: JWST images of wide binaries in the Bootes I dwarf galaxy
+  fit: contain
+  text: Related problems, many still involving binaries, from red giants and other galaxies to hot Jupiters.

@@ -1,0 +1,46 @@
+---
+layout: site
+hide_title: true
+---
+<section class="hero">
+  <img class="hero-photo" src="{{ '/images/' | append: site.author.avatar | relative_url }}" alt="Photo of {{ site.name }}" width="144" height="144">
+  <div>
+    <h1>{{ site.name }}</h1>
+    <p class="hero-role">{{ site.data.site.role }}</p>
+  </div>
+</section>
+<div class="hero-intro">{{ page.intro | markdownify }}</div>
+<div class="buttons">
+  <a class="button primary" href="{{ '/research/' | relative_url }}">Research</a>
+  <a class="button" href="{{ '/publications/' | relative_url }}">Publications</a>
+  <a class="button" href="{{ '/files/Shariat_Cheyanne_CV.pdf' | relative_url }}">CV (PDF)</a>
+  <a class="button" href="mailto:{{ site.data.site.email }}">Email</a>
+</div>
+
+<div class="section-head wide"><h2>Research</h2><a href="{{ '/research/' | relative_url }}">All research &rarr;</a></div>
+<div class="cards wide">
+  {% for r in site.data.research %}
+  <a class="card" href="{{ '/research/' | relative_url }}#{{ r.anchor }}">
+    <div class="card-media{% if r.fit == 'contain' %} contain{% endif %}"><img src="{{ r.image | relative_url }}" alt="{{ r.alt }}" loading="lazy"></div>
+    <div class="card-body">
+      <p class="card-title">{{ r.title }}</p>
+      <p class="card-text">{{ r.text }}</p>
+      {% if r.credit %}<p class="card-credit">{{ r.credit }}</p>{% endif %}
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<div class="section-head wide"><h2>Recent papers</h2><a href="{{ '/publications/' | relative_url }}">All publications &rarr;</a></div>
+{% assign recent = site.data.publications | where: "first_author", true %}
+<ul class="pub-compact wide">
+  {% for p in recent limit: 4 %}
+  <li>
+    <a href="{{ p.scix }}">{{ p.title }}</a>
+    <span class="pub-meta">{% if p.preprint %}arXiv{% else %}{{ p.journal }}{% endif %} {{ p.year }}</span>
+  </li>
+  {% endfor %}
+</ul>
+
+<div class="section-head wide"><h2>About me</h2></div>
+<div class="about">{{ content }}</div>

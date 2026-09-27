@@ -35,9 +35,7 @@ main:
 
   - title: "Media"
     url: /media/
-    
-  - title: "Contact"
-    url: /contact/
+
     
   # - title: "Guide"
   #   url: /markdown/

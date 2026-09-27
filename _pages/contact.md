@@ -1,8 +1,7 @@
 ---
-layout: archive
+layout: site
 title: "Contact"
 permalink: /contact/
-author_profile: true
 ---
 
-**email:** cshariat@caltech.edu
+The best way to reach me is by email: [cshariat@caltech.edu](mailto:cshariat@caltech.edu).

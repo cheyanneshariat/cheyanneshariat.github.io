@@ -1,0 +1,5 @@
+{% comment %} Usage: {% include site/figure.html src="/images/x.png" alt="..." caption="Markdown caption" width="620" %} {% endcomment %}
+<figure>
+  <div class="frame"><img src="{{ include.src | relative_url }}" alt="{{ include.alt }}"{% if include.width %} style="max-width: {{ include.width }}px; width: 100%"{% endif %} loading="lazy"></div>
+  {% if include.caption %}<figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" | strip }}</figcaption>{% endif %}
+</figure>
