@@ -1,10 +1,10 @@
-# Settings for scripts/update_publications_ads.py (run weekly by
+# Settings for scripts/update_publications.py (run weekly by
 # .github/workflows/update-publications.yml).
 
-# ADS search query (https://ui.adsabs.harvard.edu/help/search/search-syntax)
+# SciX/ADS search query (https://scixplorer.org/scixhelp/search/search-syntax)
 query: author:"Shariat, Cheyanne"
 
-# How your name appears in ADS author lists (used to bold it and to decide
+# How your name appears in SciX author lists (used to bold it and to decide
 # first-authorship). Matching is by prefix.
 name_variants:
   - Shariat, Cheyanne

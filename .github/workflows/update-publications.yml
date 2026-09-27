@@ -1,4 +1,4 @@
-name: Update publications from ADS
+name: Update publications from SciX
 
 on:
   schedule:
@@ -18,10 +18,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Query ADS
+      - name: Query SciX
         env:
           ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
-        run: python3 scripts/update_publications_ads.py
+        run: python3 scripts/update_publications.py
 
       - name: Commit if changed
         run: |
@@ -32,5 +32,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add _data/publications.json
-          git commit -m "Update publications from ADS"
+          git commit -m "Update publications from SciX"
           git push

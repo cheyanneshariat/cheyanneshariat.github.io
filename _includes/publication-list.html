@@ -1,6 +1,6 @@
 {% comment %}
-  Renders publications from _data/publications.json (generated from NASA ADS by
-  scripts/update_publications_ads.py).
+  Renders publications from _data/publications.json (generated from SciX by
+  scripts/update_publications.py).
   Parameters: include.first_author = true | false, include.start = number the
   list counts down from.
 {% endcomment %}
@@ -24,7 +24,7 @@
       ({{ p.year }})
     </span>
     <span class="pub__links">
-      <a href="{{ p.ads }}">ADS</a>
+      <a href="{{ p.scix }}">SciX</a>
       {% if p.arxiv %}&middot; <a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv</a>{% endif %}
       {% if p.doi %}&middot; <a href="https://doi.org/{{ p.doi }}">Journal</a>{% endif %}
     </span>

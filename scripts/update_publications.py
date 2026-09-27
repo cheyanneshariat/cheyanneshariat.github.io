@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Refresh _data/publications.json from NASA ADS.
+"""Refresh _data/publications.json from SciX (formerly NASA ADS).
 
 Usage (from the repository root):
-    ADS_API_TOKEN=... python3 scripts/update_publications_ads.py
+    ADS_API_TOKEN=... python3 scripts/update_publications.py
 or keep the token in ~/.ads/dev_key and run without the variable.
 
 The query, name variants, and manual exclusions live in
@@ -15,13 +15,18 @@ import os
 import re
 import sys
 import urllib.parse
+import urllib.error
 import urllib.request
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 CONFIG = REPO / "_data" / "publications_config.yml"
 OUTPUT = REPO / "_data" / "publications.json"
-ADS_URL = "https://api.adsabs.harvard.edu/v1/search/query"
+# SciX and ADS share one backend and one API token; ADS is the fallback.
+API_URLS = [
+    "https://api.scixplorer.org/v1/search/query",
+    "https://api.adsabs.harvard.edu/v1/search/query",
+]
 FIELDS = [
     "bibcode", "title", "author", "author_count", "year", "pubdate",
     "pub", "bibstem", "volume", "page", "doi", "identifier", "doctype",
@@ -55,15 +60,27 @@ def get_token():
     return token
 
 
-def query_ads(query, token):
+def query(q, token):
     params = urllib.parse.urlencode({
-        "q": query, "fl": ",".join(FIELDS), "rows": 500,
+        "q": q, "fl": ",".join(FIELDS), "rows": 500,
         "sort": "date desc, bibcode desc",
     })
-    req = urllib.request.Request(
-        f"{ADS_URL}?{params}", headers={"Authorization": f"Bearer {token}"})
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        return json.load(resp)["response"]["docs"]
+    for i, url in enumerate(API_URLS):
+        req = urllib.request.Request(
+            f"{url}?{params}", headers={"Authorization": f"Bearer {token}"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                return json.load(resp)["response"]["docs"]
+        except urllib.error.HTTPError as err:
+            if err.code in (401, 403):
+                sys.exit(f"{url} rejected the API token (HTTP {err.code})")
+            if i == len(API_URLS) - 1:
+                raise
+            print(f"  {url} failed (HTTP {err.code}); trying the next API")
+        except urllib.error.URLError as err:
+            if i == len(API_URLS) - 1:
+                raise
+            print(f"  {url} unreachable ({err.reason}); trying the next API")
 
 
 def initials(name):
@@ -101,7 +118,7 @@ def build(docs, cfg):
     docs = [d for d in docs
             if d["doctype"] in keep_types and d["bibcode"] not in exclude]
 
-    # ADS usually merges a preprint into its published record. When it has
+    # SciX/ADS usually merges a preprint into its published record. When it has
     # not, drop the preprint if a published article shares its year, first
     # author and author count, and borrow its arXiv ID.
     articles = [d for d in docs if d["doctype"] != "eprint"]
@@ -138,7 +155,7 @@ def build(docs, cfg):
             "page": (d.get("page") or [None])[0],
             "preprint": d["doctype"] == "eprint",
             "refereed": "REFEREED" in d.get("property", []),
-            "ads": f"https://ui.adsabs.harvard.edu/abs/{d['bibcode']}/abstract",
+            "scix": f"https://scixplorer.org/abs/{d['bibcode']}/abstract",
             "arxiv": arxiv_id(d) or d.get("_arxiv"),
             "doi": publisher_doi(d),
         })
@@ -147,8 +164,8 @@ def build(docs, cfg):
 
 def main():
     cfg = read_simple_yaml(CONFIG)
-    docs = query_ads(cfg["query"], get_token())
-    print(f"ADS returned {len(docs)} records")
+    docs = query(cfg["query"], get_token())
+    print(f"SciX returned {len(docs)} records")
     pubs = build(docs, cfg)
     n_first = sum(p["first_author"] for p in pubs)
     OUTPUT.write_text(json.dumps(pubs, indent=2, ensure_ascii=False) + "\n")

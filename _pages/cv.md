@@ -41,6 +41,6 @@ redirect_from:
 
 ## Publications
 
-See the [publications page]({{ base_path }}/publications/) for the full list, updated weekly from NASA ADS.
+See the [publications page]({{ base_path }}/publications/) for the full list.
 
 
