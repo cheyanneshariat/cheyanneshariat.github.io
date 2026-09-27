@@ -1,14 +1,25 @@
 name: Build CV PDF
 
+# Compiles cv/resume_faangpath.tex into files/Shariat_Cheyanne_CV.pdf.
+#
+# If the OVERLEAF_GIT_TOKEN secret is set, the source is first pulled from
+# the Overleaf project (read-only), so edits in Overleaf reach the website
+# within a day with no manual step. Without the secret, the workflow builds
+# whatever is committed in cv/ (see scripts/update_cv_from_zip.sh).
+
 on:
   push:
     paths:
       - "cv/**"
-      - ".github/workflows/build-cv.yml"
+  schedule:
+    - cron: "41 13 * * *"   # daily, 13:41 UTC
   workflow_dispatch:
 
 permissions:
   contents: write
+
+env:
+  OVERLEAF_PROJECT_ID: 64ed1434122846bb5a9589ff
 
 jobs:
   build-cv:
@@ -18,23 +29,44 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Install TeX Live dependencies
+      - name: Pull CV source from Overleaf
+        env:
+          OVERLEAF_GIT_TOKEN: ${{ secrets.OVERLEAF_GIT_TOKEN }}
+        run: |
+          if [ -z "$OVERLEAF_GIT_TOKEN" ]; then
+            echo "OVERLEAF_GIT_TOKEN not set; building the committed cv/ source."
+            exit 0
+          fi
+          git clone --depth 1 "https://git:${OVERLEAF_GIT_TOKEN}@git.overleaf.com/${OVERLEAF_PROJECT_ID}" /tmp/overleaf
+          rsync -a --exclude .git --exclude README.md /tmp/overleaf/ cv/
+
+      - name: Stop if nothing changed
+        id: changes
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && git diff --quiet -- cv && [ -z "$(git ls-files --others --exclude-standard cv)" ]; then
+            echo "Overleaf source unchanged."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install TeX Live
+        if: steps.changes.outputs.skip != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra
 
       - name: Compile CV
+        if: steps.changes.outputs.skip != 'true'
         run: bash scripts/build_cv.sh
 
-      - name: Commit generated CV PDF
+      - name: Commit CV source and PDF
+        if: steps.changes.outputs.skip != 'true'
         run: |
-          if git diff --quiet -- files/Shariat_Cheyanne_CV.pdf; then
-            echo "CV PDF is already up to date."
+          git add cv files/Shariat_Cheyanne_CV.pdf
+          if git diff --cached --quiet; then
+            echo "CV is already up to date."
             exit 0
           fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add files/Shariat_Cheyanne_CV.pdf
-          git commit -m "Update generated CV PDF"
+          git commit -m "Update CV from Overleaf"
           git push

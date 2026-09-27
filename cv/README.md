@@ -1,17 +1,20 @@
 # CV Source
 
-This directory contains the LaTeX source for the public CV PDF linked from the website:
+LaTeX source for the public CV PDF linked from the website
+(`files/Shariat_Cheyanne_CV.pdf`). The master copy lives in Overleaf; this
+directory mirrors it.
 
-`files/Shariat_Cheyanne_CV.pdf`
+**Automatic (Overleaf Git access):** add an Overleaf Git token as the
+`OVERLEAF_GIT_TOKEN` repository secret. `.github/workflows/build-cv.yml` then
+pulls the Overleaf project daily, rebuilds the PDF when the source changed,
+and commits both.
 
-To rebuild the PDF locally from the repository root:
+**Manual (any Overleaf plan):** in Overleaf use Menu > Download > Source, then
 
 ```bash
-bash scripts/build_cv.sh
+bash scripts/update_cv_from_zip.sh ~/Downloads/<project>.zip
 ```
 
-That command compiles `cv/resume_faangpath.tex` and copies the generated PDF to the tracked website file. Commit the source changes and `files/Shariat_Cheyanne_CV.pdf` together when updating locally.
+The push triggers the same workflow, which rebuilds the PDF.
 
-The GitHub Actions workflow in `.github/workflows/build-cv.yml` runs the same build when files in `cv/` change. If the generated PDF differs, the workflow commits the updated website PDF back to the branch.
-
-If you keep editing in Overleaf, export or sync the Overleaf source and replace the files in this directory before committing.
+To build locally: `bash scripts/build_cv.sh`.
