@@ -362,3 +362,15 @@ svg.brand { width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.4e
 
 /* Square project icons: faint outline so dark tiles stay visible in dark mode. */
 img.project-logo[src*="/icons/"] { border-radius: 26%; box-shadow: 0 0 0 1px var(--border); }
+
+/* Email button with an attached copy button. */
+.email-group { display: inline-flex; }
+.email-group .email-link { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.email-group .copy-email {
+  border-top-left-radius: 0; border-bottom-left-radius: 0; margin-left: 1px;
+  padding-left: 0.65rem; padding-right: 0.75rem; cursor: pointer; font: inherit;
+}
+.copy-email .icon-check { display: none; }
+.copy-email.copied .icon-check { display: block; }
+.copy-email.copied .icon-copy { display: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

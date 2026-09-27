@@ -42,4 +42,22 @@
       target.classList.toggle("only-first", b.dataset.value === "first");
     });
   }
+
+  // Copy-email button: copies the address and shows a checkmark briefly.
+  document.querySelectorAll(".copy-email").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var text = b.getAttribute("data-copy");
+      var done = function () {
+        b.classList.add("copied");
+        b.querySelector(".sr-only").textContent = "Email address copied";
+        setTimeout(function () { b.classList.remove("copied"); b.querySelector(".sr-only").textContent = ""; }, 1600);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done);
+      } else {
+        var t = document.createElement("textarea"); t.value = text; document.body.appendChild(t);
+        t.select(); try { document.execCommand("copy"); done(); } catch (e) {} document.body.removeChild(t);
+      }
+    });
+  });
 })();
