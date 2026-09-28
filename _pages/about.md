@@ -7,16 +7,18 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I’m a 2nd year Ph.D. student in Astrophysics at the California Institute of Technology, advised by [Kareem El-Badry](https://kareemelbadry.github.io/).
+Hi there! I’m a Ph.D. student in Astrophysics at the California Institute of Technology, working with [Kareem El-Badry](https://kareemelbadry.github.io/) and supported by the [DOE Computational Science Graduate Fellowship](https://www.gps.caltech.edu/news-and-events/news/caltech-graduate-student-and-alumna-win-doe-fellowship-for-computational-science).
 My research studies how **stars form, interact, and evolve in multiple-star systems**, particularly binaries and triples.
 
 ![Illustration of Accreting Binary in Triple](/images/CV_Triple.jpg){: .align-center width="1000px"}
 *<small>image from ["Third Wheel" Star Brings Companions Closer Together](https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together).</small>*
 
-I enjoy working at the intersection of theory and observation. On the theoretical side, I model the long-term evolution of binary and triple star systems using detailed simulations and population synthesis frameworks. I am equally interested in confronting these models with the real world: testing predictions against observations and letting them inform one another. On the observational side, I utilize data from ground- and space-based facilities, including *Gaia*, *James Webb*, *Hubble*, Palomar, and Keck, and especially enjoy exploring publicly available surveys.
+I enjoy working at the intersection of theory and observation. On the theoretical side, I model the long-term evolution of binary and triple star systems using detailed simulations and population synthesis frameworks. I am equally interested in confronting these models with the real world: testing predictions against observations and letting them inform one another.
+
+On the observational side, I utilize data from ground- and space-based facilities, including *Gaia*, *James Webb*, *Hubble*, *Roman*, Palomar, and Keck, and especially enjoy exploring publicly available surveys.
 
 Outside of astronomy, I spend most of my time playing basketball and tennis, skateboarding, and generally being outdoors.
 
-I am always happy to chat, so don’t hesitate to reach out: **cshariat@caltech.edu**.
+I am always happy to chat, so don’t hesitate to reach out!
 
 

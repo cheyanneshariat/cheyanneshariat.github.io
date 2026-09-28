@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Publication list (_includes/publication-list.html)
+   ========================================================================== */
+
+.pub-list {
+  padding-left: 1.6em;
+  margin-top: 0.5em;
+}
+
+.pub {
+  margin-bottom: 1.1em;
+  line-height: 1.45;
+}
+
+.pub__title {
+  font-weight: bold;
+}
+
+.pub__authors,
+.pub__venue {
+  font-size: 0.9em;
+}
+
+.pub__venue {
+  color: var(--global-text-color-light);
+}
+
+.pub__links {
+  font-size: 0.9em;
+  white-space: nowrap;
+}

@@ -9,10 +9,11 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "air" # Currently available options are "default", "air"
-title                    : "Home" # default: about
+title                    : "Cheyanne Shariat"
+masthead_title           : "Home" # text of the first link in the top navigation bar
 title_separator          : "-"
 name                     : &name "Cheyanne Shariat"
-description              : &description ""   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Cheyanne Shariat is an astrophysics Ph.D. student at Caltech studying how binary and triple star systems form, interact, and evolve."
 url                      : https://cheyanneshariat.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -122,7 +123,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -140,8 +141,8 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "social-preview.jpg" # Social media preview image, in /images/
+og_description           : *description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -163,6 +164,41 @@ include:
   - _pages
   - files
 exclude:
+  # Unused AcademicPages template content (kept in the repo, not published)
+  - _posts
+  - _drafts
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/cv-json.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - _pages/year-archive.html
+  - files/paper1.pdf
+  - files/paper2.pdf
+  - files/paper3.pdf
+  - files/slides1.pdf
+  - files/slides2.pdf
+  - files/slides3.pdf
+  - files/bibtex1.bib
+  - markdown_generator
+  - talkmap
+  - talkmap.py
+  - talkmap.ipynb
+  - talkmap_out.ipynb
+  - cv
+  - scripts
+  - README.md
+  - CONTRIBUTING.md
+  - docker-compose.yaml
+  - _config_docker.yml
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -222,7 +258,7 @@ collections:
     output: false
     permalink: /:collection/:path/
   publications:
-    output: true
+    output: false
     permalink: /:collection/:path/
   research:
     output: false

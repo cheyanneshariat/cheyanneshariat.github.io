@@ -5,35 +5,20 @@ permalink: /publications/
 author_profile: true
 ---
 
-<div class="wordwrap">
-  You can find my publications on 
-  <a href="https://ui.adsabs.harvard.edu/search/p_=0&q=author%3A%22Shariat%2C%20Cheyanne%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener noreferrer">ADS</a> or   
-  <a href="https://arxiv.org/search/?searchtype=author&query=Cheyanne%20Shariat" target="_blank" rel="noopener noreferrer">ArXiv</a>.
-
-</div>
-
 {% include base_path %}
+{% assign n_total = site.data.publications | size %}
+{% assign firsts = site.data.publications | where: "first_author", true %}
+{% assign n_first = firsts | size %}
+{% assign n_co = n_total | minus: n_first %}
 
-<!-- New style rendering if publication categories are defined -->
-<!-- {% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %} -->
+<p>
+  {{ n_total }} papers, {{ n_first }} as first author. See also
+  <a href="https://scixplorer.org/search?q=author%3A%22Shariat%2C%20Cheyanne%22&amp;sort=date%20desc">SciX</a> and
+  <a href="https://arxiv.org/search/?searchtype=author&amp;query=Cheyanne%20Shariat">arXiv</a>.
+</p>
 
+<h2>First-author papers</h2>
+{% include publication-list.html first_author=true start=n_first %}
 
-
+<h2>Co-authored papers</h2>
+{% include publication-list.html first_author=false start=n_co %}

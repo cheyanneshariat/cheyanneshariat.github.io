@@ -18,7 +18,7 @@ author_profile: true
 </h2>
 
 <p style="font-size: 1.12em; line-height: 1.5;">
-  A tool to add citations in LaTeX without leaving the editor
+  An Overleaf extension to add citations without leaving the editor
 </p>
 
 <ul style="font-size: 1.08em; line-height: 1.7;">
@@ -30,7 +30,7 @@ author_profile: true
 <h2 style="margin-top: 2rem;">Neutron Stars</h2>
 
 <p style="font-size: 1.12em; line-height: 1.5;">
-  Interactive version of the neutron-star population number--rate figure from Shariat et al. (2026).
+  Interactive version of the neutron-star population number&ndash;rate figure from Shariat et al. (2026).
 </p>
 
 <ul style="font-size: 1.08em; line-height: 1.7;">
@@ -42,7 +42,7 @@ author_profile: true
 Panchromatic photometry and time-series light curves for ~100,000 luminous stars in the Whirlpool Galaxy (M51), including variable stars and 173 massive eclipsing-binary candidates.
 
 - [Data and catalogs (Zenodo)](https://doi.org/10.5281/zenodo.22727123)
-- [Paper: A census of massive eclipsing binaries in the Whirlpool Galaxy](https://ui.adsabs.harvard.edu/abs/2026arXiv260919268S/abstract))
+- [Paper: A census of massive eclipsing binaries in the Whirlpool Galaxy](https://scixplorer.org/abs/2026arXiv260919268S/abstract)
 
   
 ## PCEBs
@@ -50,7 +50,7 @@ Panchromatic photometry and time-series light curves for ~100,000 luminous stars
 A public catalog of eclipsing detached post-common-envelope white dwarf-main-sequence binaries.
 
 - [GitHub repository](https://github.com/cheyanneshariat/pcebs)
-- [Paper: A global view of post-interaction white dwarf-main sequence binaries](https://ui.adsabs.harvard.edu/abs/2026arXiv260100439S/abstract)
+- [Paper: A global view of post-interaction white dwarf-main sequence binaries](https://scixplorer.org/abs/2026arXiv260100439S/abstract)
 
 The repository includes the `WDMS_EBs.csv` catalog and associated data products for the PCEB sample.
 
@@ -59,6 +59,6 @@ The repository includes the `WDMS_EBs.csv` catalog and associated data products 
 Generating a realistic stellar population including **single, binary, and triple stars**.
 
 - [GitHub repository](https://github.com/cheyanneshariat/gaia_triples)
-- [Paper: 10,000 Resolved Triples from Gaia: Empirical Constraints on Triple Star Populations](https://ui.adsabs.harvard.edu/abs/2025PASP..137i4201S/abstract)
+- [Paper: 10,000 Resolved Triples from Gaia: Empirical Constraints on Triple Star Populations](https://scixplorer.org/abs/2025PASP..137i4201S/abstract)
 
 The repository also includes the public catalog (`triples_catalog.csv`) and **a notebook demo** (`sampling_triples.ipynb`).
