@@ -1,30 +1,16 @@
-// Light/dark toggle. With no saved choice the site follows the system
-// setting. Clicking switches to the opposite of what is shown; if that matches
-// the system setting, the saved choice is cleared so the site follows the
-// system again.
+// Light/dark toggle. Dark is the default; choosing light is remembered in
+// localStorage, and switching back to dark clears the saved choice.
 (function () {
   var root = document.documentElement;
-  var media = window.matchMedia("(prefers-color-scheme: dark)");
-
-  function current() {
-    return root.dataset.theme || (media.matches ? "dark" : "light");
-  }
-
   var button = document.querySelector(".theme-toggle");
   if (button) {
     button.addEventListener("click", function () {
-      var next = current() === "dark" ? "light" : "dark";
-      var system = media.matches ? "dark" : "light";
+      var toLight = root.dataset.theme !== "light";
       try {
-        if (next === system) {
-          delete root.dataset.theme;
-          localStorage.removeItem("theme");
-        } else {
-          root.dataset.theme = next;
-          localStorage.setItem("theme", next);
-        }
+        if (toLight) { root.dataset.theme = "light"; localStorage.setItem("theme", "light"); }
+        else { delete root.dataset.theme; localStorage.removeItem("theme"); }
       } catch (e) {
-        root.dataset.theme = next;
+        if (toLight) root.dataset.theme = "light"; else delete root.dataset.theme;
       }
     });
   }
