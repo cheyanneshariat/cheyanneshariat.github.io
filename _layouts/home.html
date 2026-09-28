@@ -1,0 +1,39 @@
+---
+layout: site
+hide_title: true
+---
+<section class="hero wide">
+  <img class="hero-photo" src="{{ '/images/' | append: site.author.avatar | relative_url }}" alt="Photo of {{ site.name }}" width="144" height="144">
+  <div>
+    <h1>{{ site.name }}</h1>
+    <p class="hero-role">{{ site.data.site.role }}</p>
+    <div class="hero-links">
+      <a class="button" href="{{ '/files/Shariat_Cheyanne_CV.pdf' | relative_url }}">CV (PDF)</a>
+      <a class="button" href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a class="button" href="{{ '/research/' | relative_url }}">Research</a>
+      <span class="email-group">
+        <a class="button primary email-link" href="mailto:{{ site.data.site.email }}"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>{{ site.data.site.email }}</a>
+        <button class="button primary copy-email" type="button" data-copy="{{ site.data.site.email }}" aria-label="Copy email address" title="Copy email address"><svg class="icon icon-copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><svg class="icon icon-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="sr-only" aria-live="polite"></span></button>
+      </span>
+    </div>
+  </div>
+</section>
+<div class="hero-intro">{{ page.intro | markdownify }}</div>
+
+<div class="about hero-more">{{ content }}</div>
+
+<div class="section-head wide"><h2>Research</h2><a href="{{ '/research/' | relative_url }}">All research &rarr;</a></div>
+<div class="cards wide">
+  {% for r in site.data.research %}
+  <a class="card" href="{{ '/research/' | relative_url }}#{{ r.anchor }}">
+    <div class="card-media{% if r.fit == 'contain' %} contain{% endif %}"><img src="{{ r.image | relative_url }}" alt="{{ r.alt }}" loading="lazy"></div>
+    <div class="card-body">
+      <p class="card-title">{{ r.title }}</p>
+      <p class="card-text">{{ r.text }}</p>
+      {% if r.credit %}<p class="card-credit">{{ r.credit }}</p>{% endif %}
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+

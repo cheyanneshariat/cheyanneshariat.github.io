@@ -1,0 +1,17 @@
+{% comment %}
+  One image:  {% include site/figure.html src="/images/x.png" alt="..." caption="Markdown" width="620" %}
+  Two images side by side (stacked on phones):
+              {% include site/figure.html src="/a.jpg" alt="..." ratio="1.4" src2="/b.jpg" alt2="..." ratio2="0.9" caption="..." %}
+  ratio = image width / height, so both images get the same height.
+{% endcomment %}
+<figure>
+  {% if include.src2 %}
+  <div class="frame pair">
+    <img src="{{ include.src | relative_url }}" alt="{{ include.alt }}" style="flex: {{ include.ratio }}" loading="lazy">
+    <img src="{{ include.src2 | relative_url }}" alt="{{ include.alt2 }}" style="flex: {{ include.ratio2 }}" loading="lazy">
+  </div>
+  {% else %}
+  <div class="frame{% if include.bare %} bare{% endif %}"><img src="{{ include.src | relative_url }}" alt="{{ include.alt }}"{% if include.width %} style="max-width: {{ include.width }}px; width: 100%"{% endif %} loading="lazy"></div>
+  {% endif %}
+  {% if include.caption %}<figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" | strip }}</figcaption>{% endif %}
+</figure>

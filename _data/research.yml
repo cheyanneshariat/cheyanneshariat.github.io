@@ -1,0 +1,21 @@
+# Cards on the home page. Each links to a section of the Research page.
+- title: Triple Stars
+  anchor: triple-stars
+  image: /images/research/cards/triple_card.jpg
+  alt: Illustration of an accreting binary star with a distant third star
+  credit: Illustration from Caltech
+  fit: cover
+  text: Triples are common and dynamically rich, making them natural laboratories for stellar mergers and exotic stellar phenomena.
+- title: Binary Stars
+  anchor: binary-stars
+  image: /images/research/cards/m51_binary_card.jpg
+  alt: Hubble image of the Whirlpool Galaxy (M51), with a zoom-in on an illustrated contact binary in a spiral arm
+  fit: cover
+  text: Most stars are in binaries, and a significant fraction will interact. I study binary mass transfer and binary populations in the Milky Way and beyond.
+  credit: HST Program 10452
+- title: Broader Interests
+  anchor: broader-interests
+  image: /images/research/cards/hot_jupiter_card.jpg
+  alt: Illustration of a hot Jupiter orbiting a star, with a distant stellar companion
+  fit: cover
+  text: Related problems, many still involving binaries, from red giants and stellar ages to exoplanets.
