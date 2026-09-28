@@ -1,43 +1,8 @@
 /* Site styles. Plain CSS, no build step.
-   Colors are tokens on :root; dark values apply when the system prefers dark
-   (unless the visitor picked light) or when the visitor picked dark. */
+   Colors are tokens on :root. Dark is the default for every visitor; the
+   light values apply when the visitor switches to light (data-theme="light"). */
 
 :root {
-  --bg: #fbfaf7;
-  --surface: #ffffff;
-  --text: #1c1f24;
-  --muted: #5d6470;
-  --faint: #6b717c;
-  --border: #e6e3dc;
-  --accent: #1f5c99;
-  --accent-hover: #174a7c;
-  --accent-soft: #eaf1f9;
-  --figure-bg: #ffffff;
-  --shadow: 0 1px 2px rgba(20, 24, 31, 0.05), 0 4px 16px rgba(20, 24, 31, 0.05);
-  --radius: 12px;
-  --measure: 42rem;
-  --wide: 60rem;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0f1217;
-    --surface: #171b22;
-    --text: #e6e8ec;
-    --muted: #a3abb8;
-    --faint: #7c8594;
-    --border: #272d37;
-    --accent: #8bbfff;
-    --accent-hover: #b3d5ff;
-    --accent-soft: #1a2739;
-    --figure-bg: #f4f4f1;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.25);
-    color-scheme: dark;
-  }
-}
-
-:root[data-theme="dark"] {
   --bg: #0f1217;
   --surface: #171b22;
   --text: #e6e8ec;
@@ -49,7 +14,25 @@
   --accent-soft: #1a2739;
   --figure-bg: #f4f4f1;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.25);
+  --radius: 12px;
+  --measure: 42rem;
+  --wide: 60rem;
   color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --text: #1c1f24;
+  --muted: #5d6470;
+  --faint: #6b717c;
+  --border: #e6e3dc;
+  --accent: #1f5c99;
+  --accent-hover: #174a7c;
+  --accent-soft: #eaf1f9;
+  --figure-bg: #ffffff;
+  --shadow: 0 1px 2px rgba(20, 24, 31, 0.05), 0 4px 16px rgba(20, 24, 31, 0.05);
+  color-scheme: light;
 }
 
 /* ---------- Base ---------- */
@@ -156,14 +139,10 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 .theme-toggle:hover { color: var(--text); }
 .theme-toggle svg { width: 1.05rem; height: 1.05rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .theme-toggle .icon-moon { fill: currentColor; stroke: none; }
-/* Show the moon in light mode (click for dark) and the sun in dark mode. */
-.icon-sun { display: none; }
-:root[data-theme="dark"] .icon-sun { display: block; }
-:root[data-theme="dark"] .icon-moon { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .icon-sun { display: block; }
-  :root:not([data-theme="light"]) .icon-moon { display: none; }
-}
+/* Show the sun in dark mode (click for light) and the moon in light mode. */
+.icon-moon { display: none; }
+:root[data-theme="light"] .icon-moon { display: block; }
+:root[data-theme="light"] .icon-sun { display: none; }
 
 @media (max-width: 40rem) {
   .nav { flex-wrap: wrap; row-gap: 0.35rem; padding: 0.6rem 1rem 0.5rem; }
