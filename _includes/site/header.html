@@ -1,0 +1,15 @@
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="nav-brand" href="{{ '/' | relative_url }}">{{ site.name }}</a>
+    <ul class="nav-links">
+      {% for link in site.data.navigation.main %}
+        {% assign active = false %}{% if page.url contains link.url %}{% assign active = true %}{% endif %}
+        <li><a href="{{ link.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <button class="theme-toggle" type="button" aria-label="Switch between light and dark mode" title="Switch between light and dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+    </button>
+  </nav>
+</header>

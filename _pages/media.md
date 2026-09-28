@@ -1,15 +1,14 @@
 ---
-layout: archive
+layout: site
 title: "Media"
 permalink: /media/
-author_profile: true
 ---
 
-{% include base_path %}
 
 ## Triple Double
 
 Triple Double: Do Merging White Dwarfs Produce Fast Radio Burst–Emitting Remnants? ([astrobites](https://astrobites.org/2025/12/22/triple-double-do-merging-white-dwarfs-produce-frb-emitting-remnants/), [aasnova](https://aasnova.org/2026/03/24/triple-double-do-merging-white-dwarfs-produce-fast-radio-burst-emitting-remnants/))
+
 ## A Triple Love Story
 
 ["Third Wheel" Star Brings Companions Closer Together (Caltech)](https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together)
