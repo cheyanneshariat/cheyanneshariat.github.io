@@ -361,7 +361,7 @@ svg.brand { width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.4e
 .brand-links a { white-space: nowrap; }
 
 /* Square project icons: faint outline so dark tiles stay visible in dark mode. */
-img.project-logo[src*="/icons/"] { border-radius: 26%; box-shadow: 0 0 0 1px var(--border); }
+img.project-logo[src*="/icons/"] { border-radius: 26%; box-shadow: 0 0 0 1px color-mix(in srgb, var(--text) 16%, transparent); }
 
 /* Email button with an attached copy button. */
 .email-group { display: inline-flex; }
@@ -374,3 +374,11 @@ img.project-logo[src*="/icons/"] { border-radius: 26%; box-shadow: 0 0 0 1px var
 .copy-email.copied .icon-check { display: block; }
 .copy-email.copied .icon-copy { display: none; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Comfortable tap targets for small standalone links (footer, publication links). */
+.site-footer a { display: inline-block; padding: 0.3rem 0; }
+.pub-meta a { display: inline-block; padding: 0.2rem 0.1rem; }
+@media (max-width: 40rem) {
+  .site-footer a { padding: 0.55rem 0; }
+  .pub-meta a { padding: 0.45rem 0.2rem; }
+}
