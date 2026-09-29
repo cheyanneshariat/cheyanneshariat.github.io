@@ -1,0 +1,7 @@
+# Notes for preprints in the CV publication list (scripts/cv_publications.py).
+# Key: arXiv ID. Value: what to print before the arXiv ID, e.g. the target
+# journal and status. A note is used only while the paper is still a preprint
+# on SciX; once it is published, the journal and volume come from SciX.
+2609.19249: PASP, \textit{submitted}
+2609.19268: PASP, \textit{submitted}
+2607.12034: PASP, \textit{accepted}

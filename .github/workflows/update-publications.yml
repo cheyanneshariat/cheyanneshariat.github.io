@@ -1,12 +1,21 @@
 name: Update publications from SciX
 
+# Weekly: refresh _data/publications.json from SciX (website Publications
+# page), then regenerate the Publications section of the Overleaf CV
+# (scripts/cv_publications.py), compile it, and push it to Overleaf if it
+# changed. The daily "Build CV PDF" workflow then publishes the new PDF.
+
 on:
   schedule:
-    - cron: "17 14 * * 1"   # Mondays 14:17 UTC
+    - cron: "17 13 * * 1"   # Mondays 13:17 UTC, before the daily CV sync (13:41)
   workflow_dispatch:
 
 permissions:
   contents: write
+
+env:
+  OVERLEAF_PROJECT_ID: 64ed1434122846bb5a9589ff
+  CV_MAIN: resume_faangpath.tex
 
 jobs:
   update:
@@ -23,7 +32,7 @@ jobs:
           ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
         run: python3 scripts/update_publications.py
 
-      - name: Commit if changed
+      - name: Commit website publication list if changed
         run: |
           if git diff --quiet -- _data/publications.json; then
             echo "Publications are already up to date."
@@ -34,3 +43,41 @@ jobs:
           git add _data/publications.json
           git commit -m "Update publications from SciX"
           git push
+
+      - name: Regenerate the CV publication list in a copy of the Overleaf project
+        id: cv
+        env:
+          OVERLEAF_GIT_TOKEN: ${{ secrets.OVERLEAF_GIT_TOKEN }}
+        run: |
+          git clone --quiet "https://git:${OVERLEAF_GIT_TOKEN}@git.overleaf.com/${OVERLEAF_PROJECT_ID}" /tmp/overleaf
+          result=$(python3 scripts/cv_publications.py "/tmp/overleaf/${CV_MAIN}")
+          echo "CV publication list: ${result}"
+          echo "result=${result}" >> "$GITHUB_OUTPUT"
+
+      - name: Install TeX Live
+        if: steps.cv.outputs.result == 'changed'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra
+
+      - name: Check that the updated CV compiles
+        if: steps.cv.outputs.result == 'changed'
+        run: |
+          cp -r /tmp/overleaf /tmp/cvbuild
+          cd /tmp/cvbuild
+          latexmk -pdf -interaction=nonstopmode -halt-on-error "${CV_MAIN}"
+
+      - name: Push the updated CV to Overleaf
+        if: steps.cv.outputs.result == 'changed'
+        run: |
+          cd /tmp/overleaf
+          git config user.name "Website publication bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          n=$(python3 -c "import json;print(len(json.load(open('${GITHUB_WORKSPACE}/_data/publications.json'))))")
+          git add "${CV_MAIN}"
+          git commit -m "Update publication list from SciX (${n} papers)"
+          # Never force-push. If the project changed while this job ran, skip
+          # and let next week's run try again.
+          if ! git push --quiet origin HEAD; then
+            echo "::warning::Overleaf changed during this run; the CV will be updated next week."
+          fi

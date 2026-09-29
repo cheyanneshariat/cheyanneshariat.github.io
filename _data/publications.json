@@ -38,7 +38,46 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2026ApJ..1009...94D/abstract",
     "arxiv": "2605.15069",
-    "doi": "10.3847/1538-4357/ae9f3e"
+    "doi": "10.3847/1538-4357/ae9f3e",
+    "journal_full": "The Astrophysical Journal"
+  },
+  {
+    "bibcode": "2026arXiv260932893S",
+    "title": "Worlds Next Door. V. A Candidate Solar System Scale Super-Jupiter in the 61 Cygni Binary System",
+    "authors": [
+      "Sanghi, A.",
+      "Quarles, B.",
+      "Lin, A. S. J.",
+      "Shariat, C.",
+      "Kervella, P.",
+      "Mang, J.",
+      "Mawet, D.",
+      "Giovinazzi, M. R.",
+      "Gupta, A. F.",
+      "Beichman, C.",
+      "Mennesson, B.",
+      "Mâlin, M.",
+      "Xuan, J. W.",
+      "Majumdar, L.",
+      "Lissauer, J. J.",
+      "Wyatt, M.",
+      "Balmer, W. O.",
+      "Bendek, E.",
+      "Wagner, K."
+    ],
+    "author_count": 19,
+    "self_index": 3,
+    "first_author": false,
+    "year": "2026",
+    "journal": "arXiv",
+    "volume": null,
+    "page": "arXiv:2609.32893",
+    "preprint": true,
+    "refereed": false,
+    "scix": "https://scixplorer.org/abs/2026arXiv260932893S/abstract",
+    "arxiv": "2609.32893",
+    "doi": null,
+    "journal_full": null
   },
   {
     "bibcode": "2026arXiv260919268S",
@@ -62,7 +101,8 @@
     "refereed": false,
     "scix": "https://scixplorer.org/abs/2026arXiv260919268S/abstract",
     "arxiv": "2609.19268",
-    "doi": null
+    "doi": null,
+    "journal_full": null
   },
   {
     "bibcode": "2026arXiv260919249S",
@@ -87,7 +127,8 @@
     "refereed": false,
     "scix": "https://scixplorer.org/abs/2026arXiv260919249S/abstract",
     "arxiv": "2609.19249",
-    "doi": null
+    "doi": null,
+    "journal_full": null
   },
   {
     "bibcode": "2026PASP..138h4202B",
@@ -110,7 +151,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2026PASP..138h4202B/abstract",
     "arxiv": "2603.23756",
-    "doi": "10.1088/1538-3873/ae8dff"
+    "doi": "10.1088/1538-3873/ae8dff",
+    "journal_full": "Publications of the Astronomical Society of the Pacific"
   },
   {
     "bibcode": "2026arXiv260712034Y",
@@ -131,7 +173,8 @@
     "refereed": false,
     "scix": "https://scixplorer.org/abs/2026arXiv260712034Y/abstract",
     "arxiv": "2607.12034",
-    "doi": null
+    "doi": null,
+    "journal_full": null
   },
   {
     "bibcode": "2026PASP..138e4202S",
@@ -153,7 +196,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2026PASP..138e4202S/abstract",
     "arxiv": "2604.09767",
-    "doi": "10.1088/1538-3873/ae6a70"
+    "doi": "10.1088/1538-3873/ae6a70",
+    "journal_full": "Publications of the Astronomical Society of the Pacific"
   },
   {
     "bibcode": "2026OJAp....962534S",
@@ -174,7 +218,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2026OJAp....962534S/abstract",
     "arxiv": "2510.08675",
-    "doi": "10.33232/001c.162534"
+    "doi": "10.33232/001c.162534",
+    "journal_full": "The Open Journal of Astrophysics"
   },
   {
     "bibcode": "2026RNAAS..10...86S",
@@ -193,7 +238,8 @@
     "refereed": false,
     "scix": "https://scixplorer.org/abs/2026RNAAS..10...86S/abstract",
     "arxiv": "2604.15366",
-    "doi": "10.3847/2515-5172/ae5dbc"
+    "doi": "10.3847/2515-5172/ae5dbc",
+    "journal_full": "Research Notes of the American Astronomical Society"
   },
   {
     "bibcode": "2026PASP..138c4202S",
@@ -213,7 +259,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2026PASP..138c4202S/abstract",
     "arxiv": "2601.00439",
-    "doi": "10.1088/1538-3873/ae453b"
+    "doi": "10.1088/1538-3873/ae453b",
+    "journal_full": "Publications of the Astronomical Society of the Pacific"
   },
   {
     "bibcode": "2026ApJ..1000L..17S",
@@ -235,7 +282,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2026ApJ..1000L..17S/abstract",
     "arxiv": "2511.18678",
-    "doi": "10.3847/2041-8213/ae4d17"
+    "doi": "10.3847/2041-8213/ae4d17",
+    "journal_full": "The Astrophysical Journal Letters"
   },
   {
     "bibcode": "2026ApJ...998..122H",
@@ -256,7 +304,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2026ApJ...998..122H/abstract",
     "arxiv": "2509.21452",
-    "doi": "10.3847/1538-4357/ae2eb1"
+    "doi": "10.3847/1538-4357/ae2eb1",
+    "journal_full": "The Astrophysical Journal"
   },
   {
     "bibcode": "2025ApJ...995...27X",
@@ -277,7 +326,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2025ApJ...995...27X/abstract",
     "arxiv": "2508.13264",
-    "doi": "10.3847/1538-4357/ae160e"
+    "doi": "10.3847/1538-4357/ae160e",
+    "journal_full": "The Astrophysical Journal"
   },
   {
     "bibcode": "2025PASP..137j4103S",
@@ -322,7 +372,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2025PASP..137j4103S/abstract",
     "arxiv": "2509.04555",
-    "doi": "10.1088/1538-3873/ae11d2"
+    "doi": "10.1088/1538-3873/ae11d2",
+    "journal_full": "Publications of the Astronomical Society of the Pacific"
   },
   {
     "bibcode": "2025PASP..137i4201S",
@@ -343,7 +394,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2025PASP..137i4201S/abstract",
     "arxiv": "2506.16513",
-    "doi": "10.1088/1538-3873/adfb30"
+    "doi": "10.1088/1538-3873/adfb30",
+    "journal_full": "Publications of the Astronomical Society of the Pacific"
   },
   {
     "bibcode": "2025PASP..137g4201S",
@@ -366,7 +418,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2025PASP..137g4201S/abstract",
     "arxiv": "2501.14025",
-    "doi": "10.1088/1538-3873/add5a1"
+    "doi": "10.1088/1538-3873/add5a1",
+    "journal_full": "Publications of the Astronomical Society of the Pacific"
   },
   {
     "bibcode": "2025A&A...699A.171M",
@@ -394,7 +447,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2025A&A...699A.171M/abstract",
     "arxiv": "2502.18552",
-    "doi": "10.1051/0004-6361/202554264"
+    "doi": "10.1051/0004-6361/202554264",
+    "journal_full": "Astronomy and Astrophysics"
   },
   {
     "bibcode": "2025ApJ...983..115S",
@@ -420,7 +474,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2025ApJ...983..115S/abstract",
     "arxiv": "2411.15644",
-    "doi": "10.3847/1538-4357/adbf01"
+    "doi": "10.3847/1538-4357/adbf01",
+    "journal_full": "The Astrophysical Journal"
   },
   {
     "bibcode": "2025ApJ...978...47S",
@@ -445,7 +500,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2025ApJ...978...47S/abstract",
     "arxiv": "2407.06257",
-    "doi": "10.3847/1538-4357/ad944a"
+    "doi": "10.3847/1538-4357/ad944a",
+    "journal_full": "The Astrophysical Journal"
   },
   {
     "bibcode": "2024ApJ...977L..11S",
@@ -468,7 +524,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2024ApJ...977L..11S/abstract",
     "arxiv": "2408.13307",
-    "doi": "10.3847/2041-8213/ad94d8"
+    "doi": "10.3847/2041-8213/ad94d8",
+    "journal_full": "The Astrophysical Journal Letters"
   },
   {
     "bibcode": "2024ApJ...964L..13S",
@@ -491,7 +548,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2024ApJ...964L..13S/abstract",
     "arxiv": "2402.04574",
-    "doi": "10.3847/2041-8213/ad2c8d"
+    "doi": "10.3847/2041-8213/ad2c8d",
+    "journal_full": "The Astrophysical Journal Letters"
   },
   {
     "bibcode": "2023ApJ...955L..14S",
@@ -515,7 +573,8 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2023ApJ...955L..14S/abstract",
     "arxiv": "2306.13130",
-    "doi": "10.3847/2041-8213/acf76b"
+    "doi": "10.3847/2041-8213/acf76b",
+    "journal_full": "The Astrophysical Journal Letters"
   },
   {
     "bibcode": "2023ApJ...952..114L",
@@ -548,6 +607,7 @@
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2023ApJ...952..114L/abstract",
     "arxiv": "2305.16390",
-    "doi": "10.3847/1538-4357/acdbc8"
+    "doi": "10.3847/1538-4357/acdbc8",
+    "journal_full": "The Astrophysical Journal"
   }
 ]
