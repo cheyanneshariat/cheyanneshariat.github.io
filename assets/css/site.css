@@ -13,6 +13,8 @@
   --accent-hover: #b3d5ff;
   --accent-soft: #1a2739;
   --figure-bg: #f4f4f1;
+  --control-bg: #1c222c;       /* buttons: lifted fill */
+  --control-border: #5a6476;   /* buttons: 3.1:1 against the page */
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.25);
   --radius: 12px;
   --measure: 42rem;
@@ -31,6 +33,8 @@
   --accent-hover: #174a7c;
   --accent-soft: #eaf1f9;
   --figure-bg: #ffffff;
+  --control-bg: #ffffff;
+  --control-border: #8d8a82;   /* 3.3:1 against the page */
   --shadow: 0 1px 2px rgba(20, 24, 31, 0.05), 0 4px 16px rgba(20, 24, 31, 0.05);
   color-scheme: light;
 }
@@ -130,10 +134,10 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
   height: 2.1rem;
   display: grid;
   place-items: center;
-  border: 1px solid var(--border);
+  border: 1px solid var(--control-border);
   border-radius: 999px;
-  background: var(--surface);
-  color: var(--muted);
+  background: var(--control-bg);
+  color: var(--text);
   cursor: pointer;
 }
 .theme-toggle:hover { color: var(--text); }
@@ -170,8 +174,8 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
   gap: 0.4rem;
   padding: 0.5rem 0.95rem;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface);
+  border: 1px solid var(--control-border);
+  background: var(--control-bg);
   color: var(--text);
   text-decoration: none;
   font-size: 0.95rem;
@@ -240,13 +244,13 @@ figcaption { color: var(--muted); font-size: 0.875rem; line-height: 1.5; margin-
 
 .jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0 0.5rem; padding: 0; list-style: none; }
 .jump li { margin: 0; }
-.jump a { display: inline-block; padding: 0.3rem 0.8rem; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text); text-decoration: none; font-size: 0.9rem; }
+.jump a { display: inline-block; padding: 0.3rem 0.8rem; border: 1px solid var(--control-border); border-radius: 999px; background: var(--control-bg); color: var(--text); text-decoration: none; font-size: 0.9rem; }
 .jump a:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ---------- Publications ---------- */
 
 .pub-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; margin: 0.5rem 0 1.5rem; }
-.segmented { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; padding: 3px; background: var(--surface); }
+.segmented { display: inline-flex; border: 1px solid var(--control-border); border-radius: 999px; padding: 3px; background: var(--control-bg); }
 .segmented button { border: 0; background: none; color: var(--muted); font: inherit; font-size: 0.92rem; padding: 0.3rem 0.85rem; border-radius: 999px; cursor: pointer; }
 .segmented button[aria-pressed="true"] { background: var(--accent-soft); color: var(--text); font-weight: 550; }
 .pub-year { display: grid; grid-template-columns: 4.5rem 1fr; gap: 0 1rem; border-top: 1px solid var(--border); padding-top: 1rem; margin-bottom: 0.5rem; }
