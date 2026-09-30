@@ -41,6 +41,30 @@
     "doi": "10.3847/1538-4357/ae9f3e"
   },
   {
+    "bibcode": "2026arXiv260935999Y",
+    "title": "Beyond what's observed: hierarchical inference of Gaia astrometric compact-object binaries",
+    "authors": [
+      "Yamaguchi, N.",
+      "El-Badry, K.",
+      "Essick, R.",
+      "Farah, A.",
+      "Shariat, C.",
+      "Shahaf, S."
+    ],
+    "author_count": 6,
+    "self_index": 4,
+    "first_author": false,
+    "year": "2026",
+    "journal": "arXiv",
+    "volume": null,
+    "page": "arXiv:2609.35999",
+    "preprint": true,
+    "refereed": false,
+    "scix": "https://scixplorer.org/abs/2026arXiv260935999Y/abstract",
+    "arxiv": "2609.35999",
+    "doi": null
+  },
+  {
     "bibcode": "2026arXiv260932893S",
     "title": "Worlds Next Door. V. A Candidate Solar System Scale Super-Jupiter in the 61 Cygni Binary System",
     "authors": [
