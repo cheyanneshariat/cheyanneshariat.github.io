@@ -13,6 +13,7 @@
   --accent-hover: #b3d5ff;
   --accent-soft: #1a2739;
   --figure-bg: #f4f4f1;
+  --pub-authors: #c3c9d3;      /* author lists: brighter than --muted */
   --control-bg: #1c222c;       /* buttons: lifted fill */
   --control-border: #5a6476;   /* buttons: 3.1:1 against the page */
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.25);
@@ -33,6 +34,7 @@
   --accent-hover: #174a7c;
   --accent-soft: #eaf1f9;
   --figure-bg: #ffffff;
+  --pub-authors: #3f454f;
   --control-bg: #ffffff;
   --control-border: #8d8a82;   /* 3.3:1 against the page */
   --shadow: 0 1px 2px rgba(20, 24, 31, 0.05), 0 4px 16px rgba(20, 24, 31, 0.05);
@@ -254,17 +256,17 @@ figcaption { color: var(--muted); font-size: 0.875rem; line-height: 1.5; margin-
 .segmented button { border: 0; background: none; color: var(--muted); font: inherit; font-size: 0.92rem; padding: 0.3rem 0.85rem; border-radius: 999px; cursor: pointer; }
 .segmented button[aria-pressed="true"] { background: var(--accent-soft); color: var(--text); font-weight: 550; }
 .pub-year { display: grid; grid-template-columns: 4.5rem 1fr; gap: 0 1rem; border-top: 1px solid var(--border); padding-top: 1rem; margin-bottom: 0.5rem; }
-.pub-year h2 { font-size: 1.05rem; margin: 0.1rem 0 0; color: var(--faint); font-variant-numeric: tabular-nums; }
+.pub-year h2 { font-size: 1.2rem; font-weight: 700; margin: 0.05rem 0 0; color: var(--text); font-variant-numeric: tabular-nums; }
 .pub-list { list-style: none; margin: 0; padding: 0; }
-.pub { margin: 0 0 1.15rem; line-height: 1.45; }
-.pub-title { font-weight: 500; font-size: 1.04rem; line-height: 1.4; margin-bottom: 0.15rem; }
+.pub { margin: 0 0 1.5rem; line-height: 1.5; }
+.pub-title { font-weight: 550; font-size: 1.1rem; line-height: 1.4; margin-bottom: 0.25rem; }
 .pub-title a { color: var(--text); text-decoration: none; }
 .pub-title a:hover { color: var(--accent); }
-.pub-authors { color: var(--muted); font-size: 0.9rem; }
-.pub-authors strong { color: var(--text); font-weight: 700; }
-.pub-meta { font-size: 0.9rem; color: var(--faint); display: flex; flex-wrap: wrap; gap: 0.2rem 0.8rem; }
+.pub-authors { color: var(--pub-authors); font-size: 0.97rem; margin-bottom: 0.1rem; }
+.pub-authors strong { color: var(--accent); font-weight: 700; }
+.pub-meta { font-size: 0.93rem; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 0.2rem 0.9rem; }
 .pub-meta a { font-weight: 550; }
-.badge { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); border-radius: 4px; padding: 0.05rem 0.35rem; vertical-align: 0.1em; margin-left: 0.3rem; }
+.badge { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); border-radius: 4px; padding: 0.05rem 0.35rem; vertical-align: 0.1em; margin-right: 0.15rem; }
 .only-first .pub:not(.is-first),
 .only-first .pub-year[data-has-first="false"] { display: none; }
 @media (max-width: 40rem) {
@@ -365,3 +367,20 @@ img.project-logo[src*="/icons/"] { border-radius: 26%; box-shadow: 0 0 0 1px col
   .site-footer a { padding: 0.55rem 0; }
   .pub-meta a { padding: 0.45rem 0.2rem; }
 }
+
+/* Publications: editorial style. Serif titles (Source Serif 4,
+   loaded only on this page), italic journal lines, outlined link tags,
+   thin rules between papers. */
+.pub-title { font-family: "Source Serif 4", Georgia, "Times New Roman", serif; font-size: 1.22rem; font-weight: 600; letter-spacing: -0.005em; }
+.pub-meta > span:first-child { font-style: italic; }
+.pub-meta > span:first-child .badge { font-style: normal; }
+.pub-meta a { border: 1px solid var(--control-border); border-radius: 6px; padding: 0.1rem 0.5rem; text-decoration: none; font-size: 0.85rem; }
+.pub-meta a:hover { border-color: var(--accent); }
+.pub { padding-bottom: 1.1rem; border-bottom: 1px solid var(--border); }
+.pub:last-child { border-bottom: 0; }
+@media (max-width: 40rem) {
+  .pub-meta a { padding: 0.4rem 0.65rem; }
+}
+
+/* Preprint tag in neutral gray so the blue stays reserved for my name. */
+.badge { color: var(--muted); background: color-mix(in srgb, var(--text) 9%, transparent); }

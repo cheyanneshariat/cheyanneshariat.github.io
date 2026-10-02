@@ -26,10 +26,10 @@ permalink: /publications/
     <ol class="pub-list">
     {% for p in in_year %}
       <li class="pub{% if p.first_author %} is-first{% endif %}">
-        <div class="pub-title"><a href="{{ p.scix }}">{{ p.title }}</a>{% if p.preprint %}<span class="badge">Preprint</span>{% endif %}</div>
+        <div class="pub-title"><a href="{{ p.scix }}">{{ p.title }}</a></div>
         <div class="pub-authors">{% include site/pub-authors.html p=p %}</div>
         <div class="pub-meta">
-          <span>{% if p.preprint %}arXiv:{{ p.arxiv }}{% else %}{{ p.journal }}{% if p.volume %} {{ p.volume }}{% endif %}{% if p.page %}, {{ p.page }}{% endif %}{% endif %}</span>
+          <span>{% if p.preprint %}<span class="badge">Preprint</span> arXiv:{{ p.arxiv }}{% else %}{{ p.journal }}{% if p.volume %} {{ p.volume }}{% endif %}{% if p.page %}, {{ p.page }}{% endif %}{% endif %}</span>
           <span><a href="{{ p.scix }}">SciX</a>{% if p.arxiv %} · <a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv</a>{% endif %}{% if p.doi %} · <a href="https://doi.org/{{ p.doi }}">Journal</a>{% endif %}</span>
         </div>
       </li>
