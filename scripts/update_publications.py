@@ -15,6 +15,7 @@ import os
 import re
 import sys
 import time
+import unicodedata
 import urllib.parse
 import urllib.error
 import urllib.request
@@ -113,6 +114,13 @@ def publisher_doi(doc):
     return None
 
 
+def title_overlap(t1, t2):
+    """Fraction of shared words between two titles (Jaccard, accents removed)."""
+    norm = lambda t: set(re.findall(r"[a-z0-9]+", unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode().lower()))
+    w1, w2 = norm(t1), norm(t2)
+    return len(w1 & w2) / max(1, len(w1 | w2))
+
+
 def is_self(author, variants):
     return any(author.lower().startswith(v.lower()) for v in variants)
 
@@ -125,19 +133,22 @@ def build(docs, cfg):
             if d["doctype"] in keep_types and d["bibcode"] not in exclude]
 
     # SciX/ADS usually merges a preprint into its published record. When it has
-    # not, drop the preprint if a published article shares its year, first
-    # author and author count, and borrow its arXiv ID.
+    # not, drop the preprint only if a published article (a) has no arXiv ID of
+    # its own, (b) shares year, first author and author count, and (c) has a
+    # clearly similar title; then borrow the preprint's arXiv ID.
     articles = [d for d in docs if d["doctype"] != "eprint"]
     kept = []
     for d in docs:
         if d["doctype"] == "eprint":
             twin = next((a for a in articles
-                         if a["year"] == d["year"]
+                         if not arxiv_id(a) and not a.get("_arxiv")
+                         and a["year"] == d["year"]
                          and a["author"][0] == d["author"][0]
-                         and a.get("author_count") == d.get("author_count")),
+                         and a.get("author_count") == d.get("author_count")
+                         and title_overlap(a["title"][0], d["title"][0]) >= 0.4),
                         None)
             if twin:
-                twin.setdefault("_arxiv", arxiv_id(d))
+                twin["_arxiv"] = arxiv_id(d)
                 print(f"  merged preprint {d['bibcode']} into {twin['bibcode']}")
                 continue
         kept.append(d)
