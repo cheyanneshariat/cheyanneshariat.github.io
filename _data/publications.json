@@ -41,6 +41,28 @@
     "doi": "10.3847/1538-4357/ae9f3e"
   },
   {
+    "bibcode": "2026arXiv261000454S",
+    "title": "Gaia neutron stars: demographics, birth rates, and connections to other neutron star populations",
+    "authors": [
+      "Shariat, C.",
+      "Yamaguchi, N.",
+      "El-Badry, K.",
+      "Maccarone, T. J."
+    ],
+    "author_count": 4,
+    "self_index": 0,
+    "first_author": true,
+    "year": "2026",
+    "journal": "arXiv",
+    "volume": null,
+    "page": "arXiv:2610.00454",
+    "preprint": true,
+    "refereed": false,
+    "scix": "https://scixplorer.org/abs/2026arXiv261000454S/abstract",
+    "arxiv": "2610.00454",
+    "doi": null
+  },
+  {
     "bibcode": "2026arXiv260935999Y",
     "title": "Beyond what's observed: hierarchical inference of Gaia astrometric compact-object binaries",
     "authors": [

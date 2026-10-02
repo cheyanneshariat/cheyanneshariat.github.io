@@ -22,8 +22,8 @@ To build locally: `bash scripts/build_cv.sh`.
 ## Publications list
 
 The Publications section of the CV is written automatically, between the
-`% >>> AUTO-GENERATED PUBLICATIONS` marker comments in Overleaf. Every Monday
-`.github/workflows/update-publications.yml` queries SciX, regenerates that
+`% >>> AUTO-GENERATED PUBLICATIONS` marker comments in Overleaf. Every day
+`.github/workflows/update-publications.yml` (daily) queries SciX, regenerates that
 section with `scripts/cv_publications.py`, checks that the CV compiles, and
 pushes it to Overleaf. Edit everything else in the CV as usual.
 

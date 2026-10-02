@@ -1,13 +1,13 @@
 name: Update publications from SciX
 
-# Weekly: refresh _data/publications.json from SciX (website Publications
+# Daily: refresh _data/publications.json from SciX (website Publications
 # page), then regenerate the Publications section of the Overleaf CV
 # (scripts/cv_publications.py), compile it, and push it to Overleaf if it
 # changed. The daily "Build CV PDF" workflow then publishes the new PDF.
 
 on:
   schedule:
-    - cron: "17 13 * * 1"   # Mondays 13:17 UTC, before the daily CV sync (13:41)
+    - cron: "17 13 * * *"   # daily 13:17 UTC, before the daily CV sync (13:41)
   workflow_dispatch:
 
 permissions:
