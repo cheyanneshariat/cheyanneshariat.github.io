@@ -49,7 +49,13 @@ jobs:
         env:
           OVERLEAF_GIT_TOKEN: ${{ secrets.OVERLEAF_GIT_TOKEN }}
         run: |
-          git clone --quiet "https://git:${OVERLEAF_GIT_TOKEN}@git.overleaf.com/${OVERLEAF_PROJECT_ID}" /tmp/overleaf
+          # Overleaf's Git server is occasionally briefly unavailable: retry.
+          for wait in 0 60 180 420; do
+            sleep $wait
+            git clone --quiet "https://git:${OVERLEAF_GIT_TOKEN}@git.overleaf.com/${OVERLEAF_PROJECT_ID}" /tmp/overleaf && break
+            rm -rf /tmp/overleaf
+          done
+          [ -d /tmp/overleaf ] || { echo "::error::Overleaf unavailable after retries"; exit 1; }
           result=$(python3 scripts/cv_publications.py "/tmp/overleaf/${CV_MAIN}")
           echo "CV publication list: ${result}"
           echo "result=${result}" >> "$GITHUB_OUTPUT"

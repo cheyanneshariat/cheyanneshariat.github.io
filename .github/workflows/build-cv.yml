@@ -39,7 +39,12 @@ jobs:
             echo "OVERLEAF_GIT_TOKEN not set; building the committed cv/ source."
             exit 0
           fi
-          git clone --depth 1 "https://git:${OVERLEAF_GIT_TOKEN}@git.overleaf.com/${OVERLEAF_PROJECT_ID}" /tmp/overleaf
+          for wait in 0 60 180 420; do
+            sleep $wait
+            git clone --depth 1 "https://git:${OVERLEAF_GIT_TOKEN}@git.overleaf.com/${OVERLEAF_PROJECT_ID}" /tmp/overleaf && break
+            rm -rf /tmp/overleaf
+          done
+          [ -d /tmp/overleaf ] || { echo "::error::Overleaf unavailable after retries"; exit 1; }
           rsync -a --exclude .git --exclude README.md /tmp/overleaf/ cv/
 
       - name: Stop if nothing changed

@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.parse
 import urllib.error
 import urllib.request
@@ -60,27 +61,32 @@ def get_token():
     return token
 
 
-def query(q, token):
+def query(q, token, waits=(0, 30, 90, 240)):
+    """Search SciX (ADS as fallback). Rate limits (429) and server errors (5xx)
+    are retried after the waits above, in seconds; a rejected token stops."""
     params = urllib.parse.urlencode({
         "q": q, "fl": ",".join(FIELDS), "rows": 500,
         "sort": "date desc, bibcode desc",
     })
-    for i, url in enumerate(API_URLS):
-        req = urllib.request.Request(
-            f"{url}?{params}", headers={"Authorization": f"Bearer {token}"})
-        try:
-            with urllib.request.urlopen(req, timeout=60) as resp:
-                return json.load(resp)["response"]["docs"]
-        except urllib.error.HTTPError as err:
-            if err.code in (401, 403):
-                sys.exit(f"{url} rejected the API token (HTTP {err.code})")
-            if i == len(API_URLS) - 1:
-                raise
-            print(f"  {url} failed (HTTP {err.code}); trying the next API")
-        except urllib.error.URLError as err:
-            if i == len(API_URLS) - 1:
-                raise
-            print(f"  {url} unreachable ({err.reason}); trying the next API")
+    last = None
+    for wait in waits:
+        if wait:
+            print(f"  waiting {wait} s before retrying ({last})")
+            time.sleep(wait)
+        for url in API_URLS:
+            req = urllib.request.Request(
+                f"{url}?{params}", headers={"Authorization": f"Bearer {token}"})
+            try:
+                with urllib.request.urlopen(req, timeout=60) as resp:
+                    return json.load(resp)["response"]["docs"]
+            except urllib.error.HTTPError as err:
+                if err.code in (401, 403):
+                    sys.exit(f"{url} rejected the API token (HTTP {err.code})")
+                last = f"{url}: HTTP {err.code}"
+            except urllib.error.URLError as err:
+                last = f"{url}: {err.reason}"
+            print(f"  {last}")
+    sys.exit(f"SciX and ADS unavailable after retries ({last})")
 
 
 def initials(name):
