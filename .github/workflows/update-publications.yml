@@ -60,14 +60,21 @@ jobs:
           echo "CV publication list: ${result}"
           echo "result=${result}" >> "$GITHUB_OUTPUT"
 
+      - name: Does the website CV need updating?
+        id: need
+        run: |
+          if [ "${{ steps.cv.outputs.result }}" = changed ] || ! cmp -s "cv/${CV_MAIN}" "/tmp/overleaf/${CV_MAIN}"; then
+            echo "build=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Install TeX Live
-        if: steps.cv.outputs.result == 'changed'
+        if: steps.need.outputs.build == 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra
 
       - name: Check that the updated CV compiles
-        if: steps.cv.outputs.result == 'changed'
+        if: steps.need.outputs.build == 'true'
         run: |
           cp -r /tmp/overleaf /tmp/cvbuild
           cd /tmp/cvbuild
@@ -87,3 +94,15 @@ jobs:
           if ! git push --quiet origin HEAD; then
             echo "::warning::Overleaf changed during this run; the CV will be updated next week."
           fi
+
+      - name: Publish the compiled CV on the website
+        if: steps.need.outputs.build == 'true'
+        run: |
+          rsync -a --exclude .git --exclude README.md /tmp/overleaf/ cv/
+          cp "/tmp/cvbuild/${CV_MAIN%.tex}.pdf" files/Shariat_Cheyanne_CV.pdf
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cv files/Shariat_Cheyanne_CV.pdf
+          git diff --cached --quiet && { echo "Website CV already current."; exit 0; }
+          git commit -m "Update CV PDF from Overleaf"
+          git push
