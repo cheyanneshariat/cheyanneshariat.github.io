@@ -17,11 +17,19 @@ An Overleaf extension to add citations without leaving the editor.
   <li><a href="https://github.com/cheyanneshariat/OverCite">{% include icons/github.svg %}GitHub</a></li>
 </ul>
 
-## <img class="project-logo" src="/images/icons/neutron-stars.png" alt="">Neutron Stars
+## <img class="project-logo" src="/images/icons/gaia-ns-binary.png" alt="">Neutron Stars
 
 Interactive version of the neutron-star population number–rate figure from Shariat et al. (2026).
 
 - [Open interactive figure](/code/ns-populations/)
+- [Paper: Gaia neutron stars: demographics, birth rates, and connections to other neutron star populations](https://scixplorer.org/abs/2026arXiv261000454S/abstract)
+
+## <img class="project-logo" src="/images/icons/ns-kicks.png" alt="">Neutron Star Kicks
+
+A short NumPy function to sample neutron-star natal kicks from the global bimodal kick distribution of Shariat, El-Badry, & Naoz (2026).
+
+- [{% include icons/github.svg %}GitHub repository](https://github.com/cheyanneshariat/ns-kick-sampler)
+- [Paper: A concordance model of neutron star kicks](https://scixplorer.org/abs/2026arXiv261004005S/abstract)
 
 ## <img class="project-logo" src="/images/icons/m51.png" alt="">Luminous variables in the Whirlpool Galaxy
 
