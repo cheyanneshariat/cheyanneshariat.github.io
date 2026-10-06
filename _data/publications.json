@@ -1,5 +1,26 @@
 [
   {
+    "bibcode": "2026arXiv261004005S",
+    "title": "A concordance model of neutron star kicks",
+    "authors": [
+      "Shariat, C.",
+      "El-Badry, K.",
+      "Naoz, S."
+    ],
+    "author_count": 3,
+    "self_index": 0,
+    "first_author": true,
+    "year": "2026",
+    "journal": "arXiv",
+    "volume": null,
+    "page": null,
+    "preprint": true,
+    "refereed": false,
+    "scix": "https://scixplorer.org/abs/2026arXiv261004005S/abstract",
+    "arxiv": "2610.04005",
+    "doi": null
+  },
+  {
     "bibcode": "2026ApJ..1009...94D",
     "title": "Probing the Initial Mass Function in the Early Universe: Direct Measurements in the Boötes I Ultrafaint Dwarf Galaxy with JWST/NIRCam",
     "authors": [
