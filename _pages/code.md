@@ -22,6 +22,7 @@ An Overleaf extension to add citations without leaving the editor.
 Interactive version of the neutron-star population number–rate figure from Shariat et al. (2026).
 
 - [Open interactive figure](/code/ns-populations/)
+- [Paper: Gaia neutron stars: demographics, birth rates, and connections to other neutron star populations](https://scixplorer.org/abs/2026arXiv261000454S/abstract)
 
 ## <img class="project-logo" src="/images/icons/ns-kicks.png" alt="">Neutron Star Kicks
 
