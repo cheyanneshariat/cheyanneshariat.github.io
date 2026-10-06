@@ -28,6 +28,11 @@ jobs:
           python-version: "3.12"
 
       - name: Query SciX
+        id: scix
+        # If SciX is unreachable or the token is rejected, keep going with the
+        # saved list so the CV still updates; the last step then fails the run
+        # so the problem is visible (GitHub emails on failure).
+        continue-on-error: true
         env:
           ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
         run: python3 scripts/update_publications.py
@@ -106,3 +111,9 @@ jobs:
           git diff --cached --quiet && { echo "Website CV already current."; exit 0; }
           git commit -m "Update CV PDF from Overleaf"
           git push
+
+      - name: Fail the run if the SciX query failed
+        if: steps.scix.outcome == 'failure'
+        run: |
+          echo "::error::SciX query failed (check the ADS_API_TOKEN secret). The website and CV used the previously saved publication list."
+          exit 1
