@@ -179,11 +179,33 @@ def build(docs, cfg):
     return pubs
 
 
+def keep_listed(pubs, cfg):
+    """Never silently drop a paper that is already listed. SciX's author search
+    can lag a few days behind a record (a paper that is on SciX may not appear
+    in the search yet), so a previously listed paper that is missing from this
+    result is kept, unless it is in exclude_bibcodes in the config."""
+    if not OUTPUT.exists():
+        return pubs
+    exclude = set(cfg.get("exclude_bibcodes", []))
+    have_b = {p["bibcode"] for p in pubs}
+    have_a = {p["arxiv"] for p in pubs if p.get("arxiv")}
+    for i, old in enumerate(json.loads(OUTPUT.read_text())):
+        if old["bibcode"] in have_b or old["bibcode"] in exclude:
+            continue
+        if old.get("arxiv") and old["arxiv"] in have_a:
+            continue   # now listed under its published record
+        print(f"  kept {old['bibcode']} ({old['title'][:50]}): not returned by "
+              "the SciX search yet")
+        pubs.insert(min(i, len(pubs)), old)
+    return pubs
+
+
 def main():
     cfg = read_simple_yaml(CONFIG)
     docs = query(cfg["query"], get_token())
     print(f"SciX returned {len(docs)} records")
     pubs = build(docs, cfg)
+    pubs = keep_listed(pubs, cfg)
     n_first = sum(p["first_author"] for p in pubs)
     OUTPUT.write_text(json.dumps(pubs, indent=2, ensure_ascii=False) + "\n")
     print(f"Wrote {len(pubs)} publications ({n_first} first-author) to "
