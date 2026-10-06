@@ -23,6 +23,13 @@ Interactive version of the neutron-star population number–rate figure from Sha
 
 - [Open interactive figure](/code/ns-populations/)
 
+## <img class="project-logo" src="/images/icons/ns-kicks.png" alt="">Neutron Star Kicks
+
+A short NumPy function to sample neutron-star natal kicks from the global bimodal kick distribution of Shariat et al. (2026).
+
+- [{% include icons/github.svg %}GitHub repository](https://github.com/cheyanneshariat/ns-kick-sampler)
+- [Paper: A concordance model of neutron star kicks](https://scixplorer.org/abs/2026arXiv261004005S/abstract)
+
 ## <img class="project-logo" src="/images/icons/m51.png" alt="">Luminous variables in the Whirlpool Galaxy
 
 Panchromatic photometry and time-series light curves for ~100,000 luminous stars in the Whirlpool Galaxy (M51), including variable stars and 173 massive eclipsing-binary candidates.
