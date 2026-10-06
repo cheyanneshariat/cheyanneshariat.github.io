@@ -26,7 +26,7 @@ Interactive version of the neutron-star population number–rate figure from Sha
 
 ## <img class="project-logo" src="/images/icons/ns-kicks.png" alt="">Neutron Star Kicks
 
-A short NumPy function to sample neutron-star natal kicks from the global bimodal kick distribution of Shariat et al. (2026).
+A short NumPy function to sample neutron-star natal kicks from the global bimodal kick distribution of Shariat, El-Badry, & Naoz (2026).
 
 - [{% include icons/github.svg %}GitHub repository](https://github.com/cheyanneshariat/ns-kick-sampler)
 - [Paper: A concordance model of neutron star kicks](https://scixplorer.org/abs/2026arXiv261004005S/abstract)
