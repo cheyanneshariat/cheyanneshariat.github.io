@@ -17,7 +17,7 @@ An Overleaf extension to add citations without leaving the editor.
   <li><a href="https://github.com/cheyanneshariat/OverCite">{% include icons/github.svg %}GitHub</a></li>
 </ul>
 
-## <img class="project-logo" src="/images/icons/neutron-stars.png" alt="">Neutron Stars
+## <img class="project-logo" src="/images/icons/gaia-ns-binary.png" alt="">Neutron Stars
 
 Interactive version of the neutron-star population number–rate figure from Shariat et al. (2026).
 
