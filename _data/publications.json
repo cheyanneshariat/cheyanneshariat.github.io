@@ -194,6 +194,27 @@
     "doi": null
   },
   {
+    "bibcode": "2026PASP..138i4209Y",
+    "title": "Population Demographics of Post-interaction WDMS Binaries: From Common Envelope Evolution to Stable Mass Transfer",
+    "authors": [
+      "Yamaguchi, N.",
+      "El-Badry, K.",
+      "Shariat, C."
+    ],
+    "author_count": 3,
+    "self_index": 2,
+    "first_author": false,
+    "year": "2026",
+    "journal": "PASP",
+    "volume": "138",
+    "page": "094209",
+    "preprint": false,
+    "refereed": true,
+    "scix": "https://scixplorer.org/abs/2026PASP..138i4209Y/abstract",
+    "arxiv": "2607.12034",
+    "doi": "10.1088/1538-3873/aea2ce"
+  },
+  {
     "bibcode": "2026PASP..138h4202B",
     "title": "Thermally Inflated Accretors in Post-mass Transfer Binaries: A35 and its Class Revisited",
     "authors": [
@@ -215,27 +236,6 @@
     "scix": "https://scixplorer.org/abs/2026PASP..138h4202B/abstract",
     "arxiv": "2603.23756",
     "doi": "10.1088/1538-3873/ae8dff"
-  },
-  {
-    "bibcode": "2026arXiv260712034Y",
-    "title": "Population demographics of post-interaction WDMS binaries: From common envelope evolution to stable mass transfer",
-    "authors": [
-      "Yamaguchi, N.",
-      "El-Badry, K.",
-      "Shariat, C."
-    ],
-    "author_count": 3,
-    "self_index": 2,
-    "first_author": false,
-    "year": "2026",
-    "journal": "arXiv",
-    "volume": null,
-    "page": "arXiv:2607.12034",
-    "preprint": true,
-    "refereed": false,
-    "scix": "https://scixplorer.org/abs/2026arXiv260712034Y/abstract",
-    "arxiv": "2607.12034",
-    "doi": null
   },
   {
     "bibcode": "2026PASP..138e4202S",
