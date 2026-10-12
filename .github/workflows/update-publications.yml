@@ -62,6 +62,9 @@ jobs:
           done
           [ -d /tmp/overleaf ] || { echo "::error::Overleaf unavailable after retries"; exit 1; }
           result=$(python3 scripts/cv_publications.py "/tmp/overleaf/${CV_MAIN}")
+          # One-off lines from _data/cv_additions.yml (telescope time, talks, ...)
+          added=$(python3 scripts/cv_additions.py "/tmp/overleaf/${CV_MAIN}")
+          [ "$added" = changed ] && result=changed
           echo "CV publication list: ${result}"
           echo "result=${result}" >> "$GITHUB_OUTPUT"
 
@@ -93,7 +96,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           n=$(python3 -c "import json;print(len(json.load(open('${GITHUB_WORKSPACE}/_data/publications.json'))))")
           git add "${CV_MAIN}"
-          git commit -m "Update publication list from SciX (${n} papers)"
+          git commit -m "Update CV from website repo: publication list from SciX (${n} papers) and additions"
           # Never force-push. If the project changed while this job ran, skip
           # and let next week's run try again.
           if ! git push --quiet origin HEAD; then
