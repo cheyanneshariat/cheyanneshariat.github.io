@@ -1,7 +1,0 @@
-# One-off lines added to the Overleaf CV by scripts/cv_additions.py (run by
-# .github/workflows/cv-additions.yml). Each entry is inserted once, directly
-# after the line containing `after`; entries already present are skipped.
-- text: '\item Swift UVOT, Target of Opportunity	\hfill 3 ks (PI)'
-  after: '\item James Webb Space Telescope'
-- text: '\item Explore JPL, Talk, NASA/JPL, Pasadena, CA 	\hfill 2026'
-  after: '\begin{rSection}{Talks}'
