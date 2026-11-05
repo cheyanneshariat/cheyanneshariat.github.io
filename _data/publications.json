@@ -1,5 +1,39 @@
 [
   {
+    "bibcode": "2026arXiv261106915Y",
+    "title": "Preparing for the Gaia DR4 Epochalypse: Simulated Epoch Astrometry for Substellar Companion Orbit-Modeling Benchmarks",
+    "authors": [
+      "Yahalomi, D. A.",
+      "Price-Whelan, A. M.",
+      "Speedie, J.",
+      "Thompson, W.",
+      "Bedell, M.",
+      "Ramirez Delgado, V.",
+      "Behmard, A.",
+      "Binnenfeld, A.",
+      "Blakely, D.",
+      "Brown, A. G. A.",
+      "Casey, A. R.",
+      "Dong, J.",
+      "Do Ó, C. R.",
+      "Lammers, C.",
+      "Shariat, C.",
+      "Winn, J. N."
+    ],
+    "author_count": 16,
+    "self_index": 14,
+    "first_author": false,
+    "year": "2026",
+    "journal": "arXiv",
+    "volume": null,
+    "page": "arXiv:2611.06915",
+    "preprint": true,
+    "refereed": false,
+    "scix": "https://scixplorer.org/abs/2026arXiv261106915Y/abstract",
+    "arxiv": "2611.06915",
+    "doi": null
+  },
+  {
     "bibcode": "2026arXiv261004005S",
     "title": "A concordance model of neutron star kicks",
     "authors": [
@@ -211,7 +245,7 @@
     "preprint": false,
     "refereed": true,
     "scix": "https://scixplorer.org/abs/2026PASP..138i4209Y/abstract",
-    "arxiv": null,
+    "arxiv": "2607.12034",
     "doi": "10.1088/1538-3873/aea2ce"
   },
   {
