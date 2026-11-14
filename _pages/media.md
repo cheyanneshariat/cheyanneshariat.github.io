@@ -11,7 +11,7 @@ Triple Double: Do Merging White Dwarfs Produce Fast Radio Burst–Emitting Remna
 
 ## A Triple Love Story
 
-["Third Wheel" Star Brings Companions Closer Together (Caltech)](https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together)
+"Third Wheel" Star Brings Companions Closer Together ([Caltech](https://www.caltech.edu/about/news/third-wheel-star-brings-companions-closer-together), [Interesting Engineering](https://interestingengineering.com/science/white-dwarf-triples-cv-formation), [Pasadena Now](https://pasadenanow.com/main/caltech-led-study-suggests-third-wheel-star-brings-companions-closer-together))
 
 ## Department of Energy + Computation
 
